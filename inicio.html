@@ -1,0 +1,786 @@
+﻿
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CALCPRF | INÍCIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="PRF - Sistema Integrado de Perícia">
+    <meta name="author" content="PRF/SIP">
+    <meta name="csrf-token" content="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+    <meta id="_token" value="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+
+
+    <link rel="shortcut icon" href="https://sicop.prf.gov.br/sicop/favicon.ico"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+
+  
+
+    <!-- Icons -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Main styles for this application -->
+    <link href="https://sicop.prf.gov.br/sicop/build/css/all.css?id=524d9076de909eaa44c0" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+    
+
+</head>
+
+<body class="app header-fixed sidebar-fixed sidebar-lg-show">
+<header class="app-header navbar">
+            <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="https://sicop.prf.gov.br/sicop/prf.png" width="89" height="25" alt="PRF">
+    </a>
+            <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-xl-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+    <a  href="./login.html" class="nome-sistema d-md-down-none" >
+        SIP
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown d-md-down-none">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+               aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bars"></i>
+                <span class="hidden-xs-down" >Sistemas</span>
+                
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a target="_blank" href="https://www170.prf.gov.br/alertabrasil" class="dropdown-item "><i
+                    class="far fa-square"></i> Alerta Brasil</a>
+                                                                <a target="_blank" href="https://www170.prf.gov.br/alertacentral" class="dropdown-item "><i
+                    class="far fa-square"></i> Alerta Brasil 2</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/novobat" class="dropdown-item "><i
+                    class="far fa-square"></i> BAT</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/bop" class="dropdown-item "><i
+                    class="far fa-square"></i> BOP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/pdi" class="dropdown-item "><i
+                    class="far fa-square"></i> PDI</a>
+                                                                <a target="_blank" href="https://sei.prf.gov.br/" class="dropdown-item "><i
+                    class="far fa-square"></i> SEI</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/sicop" class="dropdown-item "><i
+                    class="far fa-square"></i> SICOP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/silver" class="dropdown-item "><i
+                    class="far fa-square"></i> SILVER</a>
+                                                                <a href="#" class="dropdown-item active"><i
+                    class="far fa-check-square"></i> SIP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/multa2" class="dropdown-item "><i
+                    class="far fa-square"></i> SISCOM</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/sisnar" class="dropdown-item "><i
+                    class="far fa-square"></i> SISNAR</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/webmail" class="dropdown-item "><i
+                    class="far fa-square"></i> WebMail</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/wikiprf" class="dropdown-item "><i
+                    class="far fa-square"></i> WikiPRF</a>
+                                                </div>
+        </li>
+        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user"></i>
+                    <span class="d-md-down-none"></span>
+                    
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    
+                    
+                    
+                    <form action="https://sicop.prf.gov.br/sicop/logout" method="post">
+                        <input type="hidden" name="_token" value="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+                        <button type="submit" class="dropdown-item">
+                            <i class="fa fa-power-off"></i> <b>Sair</b>
+                        </button>
+                    </form>
+                </div>
+                    </li>
+    </ul>
+
+</header>
+
+<div class="app-body" id="site">
+ 
+
+    <div class="sidebar" >
+
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='#'">
+        <i class="fa fa-home"> Início</i>
+      </button>
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='./Confeccao.html'">
+        <i class="fas fa-edit"> Confecção</i>
+      </button>
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='./Atendimento.html'">
+        <i class="fa fa-pen"> Atendimento</i>
+      </button>
+      <button class="w3-button w3-grey w3-left-align w3-hover-blue"  style="font-size: 20px;" onclick="location.href='./inicio.html'">
+        <i class="fa fa-calculator"> CALCPRF</i>
+      </button>
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='#'">
+        <i class="fa fa-comments"> Fale conosco</i>
+      </button>
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='./LPRF.pdf'" target="_blank">
+        <i class="fa fa-file-pdf"> Modelo</i>
+      </button>
+      
+      
+      <button style="margin-bottom: 0em;" class="sidebar-minimizer" type="button"></button>
+                        
+
+                        
+    </div>
+
+    <!-- Main content -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <main class="main">
+      
+      <section class="main-content">
+
+     
+      <div class="container1">
+        <div class="row">
+       <div class="col-sm-2" >
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading" >
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" ><center>TIPOS DE ACIDENTES</center><center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+            
+              <div class="panel-body"><div class="container1">
+        
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" >ATROPELAMENTO<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">	
+                <a href="./Atropelamento SEARLE pela projeção do pedestre.html" >VELOCIDADE DE ATROPELAMENTO POR LANÇAMENTO TOTAL (SEARLE)</a><br><br>
+                            
+                                              <a href="./Distância de Visibilidade.html" >DISTÂNCIA DE VISIBILIDADE REAL POR SITUAÇÃO SIMULADA (NOTURNA)</a><br><br>
+                    
+                                              <a href="./Distância de Frenagem.html" >DISTÂNCIA DE FRENAGEM / ARRASTAMENTO PELA VELOCIDADE</a><br><br>
+                    
+                                              <a href="./Distância de percepção  reação  acionamento.html" >DISTÂNCIA DE PERCEPÇÃO / ACIONAMENTO / REAÇÃO</a><br><br>
+                    
+                                              <a href="./Manobra evasiva Total.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</a><br><br>
+                    
+                                              <a href="./Manobra evasiva.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</a><br><br>
+                    
+                                              <a href="./Atropelamento SEARLE pela projeção do pedestre distancia.html" >DISTÂNCIA DE ATROPELAMENTO PELA VELOCIDADE (SEARLE)</a><br><br>
+                    
+                                              <a href="./Conversão de graus em percentual na Curva.html" >INCLINAÇÃO / RAMPA / VALOR</a><br><br>
+                   
+                                              <a href="./Velocidade pelo rompimento do Parabrisa.html" >VELOCIDADE DE ATROPELAMENTO POR DANO NO PARA-BRISA</a>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" >SAÍDA DA PISTA<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                <a href="./No plano.html" >PARCELAS DE ARRASTAMENTO / ATRITAMENTO / DERRAPAGEM</a><br><br>
+                    
+                                              <a href="./Saida de Pista em rampa.html" >VELOCIDADE DE SAÍDA DE PISTA EM RAMPA (LANÇAMENTO)</a><br><br>
+                   
+                                              <a href="./Velocidade pelo deslocamento de Poste de concreto.html" >COLISÃO COM POSTE DE CONCRETO</a><br><br>
+                    
+                                              <a href="./Velocidade pelo deslocamento de objeto móvel.html" >COLISÃO COM OBJETO MÓVEL</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (1 RAIOS).html" >VELOCIDADE CRÍTICA DE CURVA SIMPLIFICADA</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA NA CURVA.html" >VELOCIDADE CRÍTICA DE CURVA</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (2 RAIOS).html" >VELOCIDADE CRÍTICA POR MARCAS DE DERRAPAGEM CIRCULAR (2 RAIOS)</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (1 RAIOS).html" >VELOCIDADE CRÍTICA POR MARCAS DE DERRAPAGEM CIRCULAR (1 RAIO)</a><br><br>
+                    
+                                              <a href="./CAPOTAMENTO.html" >VELOCIDADE DE CAPOTAMENTO</a><br><br>
+                    
+                                              <a href="./CÁLCULO DO RAIO DA CURVA.html" >RAIO DE CURVA</a><br><br>
+                    
+                                              <a href="./Conversão de graus em percentual na Curva.html" >INCLINAÇÃO / RAMPA / VALOR</a><br><br>
+                    
+                                              <a href="./Distância de Frenagem e percepção.html" >DISTÂNCIA DE PERCEPÇÃO / REAÇÃO E FRENAGEM / ARRASTAMENTO PELA VELOCIDADE E TEMPO DE REAÇÃO / PERCEPÇÃO</a><br><br>
+                    
+                                              <a href="./Soma das Velocidades quadráticas.html" >SOMA DE VELOCIDADES (QUADRÁTICA)</a></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" >CAPOTAMENTO<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">
+                      <a href="./CAPOTAMENTO.html" >VELOCIDADE DE CAPOTAMENTO</a><br><br>
+                
+                                              <a href="./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (1 RAIOS).html" >VELOCIDADE CRÍTICA DE CURVA SIMPLIFICADA</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA NA CURVA.html" >VELOCIDADE CRÍTICA DE CURVA</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (2 RAIOS).html" >VELOCIDADE CRÍTICA POR MARCAS DE DERRAPAGEM CIRCULAR (2 RAIOS)</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (1 RAIOS).html" >VELOCIDADE CRÍTICA POR MARCAS DE DERRAPAGEM CIRCULAR (1 RAIO)</a><br><br>
+                    
+                                              <a href="./Aquaplanagem veículos Modelo 01.html" >VELOCIDADE DE AQUAPLANAGEM 1 (PRESSÃO DOS PNEUS)</a><br><br>
+                    
+                                              <a href="./Aquaplanagem veículos Modelo Hidroplaneo(NAVIN).html" >VELOCIDADE DE AQUAPLANAGEM 2 (PRESSÃO DOS PNEUS E SUPERFÍCIE DE CONTATO COM O SOLO)</a><br><br>
+                    
+                                              <a href="./Aquaplanagem veículos pesados(Caminhões).html" >VELOCIDADE DE AQUAPLANAGEM  PARA VEÍCULOS PESADOS</a><br><br>
+                    
+                                              <a href="./CÁLCULO DO RAIO DA CURVA.html" >RAIO DE CURVA</a><br><br>
+                    
+                                              <a href="./Soma das Velocidades quadráticas.html" >SOMA DE VELOCIDADES (QUADRÁTICA)</a><br><br>
+                    
+                                              <a href="./CAPOTABILIDADE.html" >CAPOTABILIDADE</a><br><br>
+                    
+                                              <a href="./VELOCIDADE DE CAPOTAMENTO DE VEÍCULOS DE GRANDE PORTE.html" >VELOCIDADE DE TOMBAMENTO DE VEÍCULOS DE CARGA</a><br><br>
+                    
+                                              <a href="./Coeficiente de atrito em rampa.html" >CA/FA EM RAMPA</a><br><br>
+                    
+                                              <a href="./CENTRO DE MASSA.html" >CENTRO DE MASSA</a></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" >TOMBAMENTO<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+              <div class="panel-body">
+                      <a href="./TOMBAMENTO.html" >VELOCIDADE DE TOMBAMENTO</a><br><br>
+                    
+                                              <a href="./VELOCIDADE DE CAPOTAMENTO DE VEÍCULOS DE GRANDE PORTE.html" >VELOCIDADE DE TOMBAMENTO DE VEÍCULOS DE CARGA</a><br><br>
+                    
+                <a href="./VELOCIDADE CRÍTICA NA CURVA.html" >VELOCIDADE CRÍTICA DE CURVA</a><br><br>
+                    
+                                              <a href="./Aquaplanagem veículos Modelo 01.html" >VELOCIDADE DE AQUAPLANAGEM 1 (PRESSÃO DOS PNEUS)</a><br><br>
+                    
+                                              <a href="./Aquaplanagem veículos Modelo Hidroplaneo(NAVIN).html" >VELOCIDADE DE AQUAPLANAGEM 2 (PRESSÃO DOS PNEUS E SUPERFÍCIE DE CONTATO COM O SOLO)</a><br><br>
+                    
+                                              <a href="./Aquaplanagem veículos pesados(Caminhões).html" >VELOCIDADE DE AQUAPLANAGEM  PARA VEÍCULOS PESADOS</a><br><br>
+                    
+                                              <a href="./CÁLCULO DO RAIO DA CURVA.html" >RAIO DE CURVA</a><br><br>
+                    
+                                              <a href="./Soma das Velocidades quadráticas.html" >SOMA DE VELOCIDADES (QUADRÁTICA)</a><br><br>
+                    
+                                              <a href="./CAPOTABILIDADE.html" >CAPOTABILIDADE</a><br><br>
+                    
+                                              <a href="./Coeficiente de atrito em rampa.html" >CA/FA EM RAMPA</a></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" >COLISÃO COM OBJETOS<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+              <div class="panel-body">
+                      <a href="./COLISÃO COLINEAR.html" >VELOCIDADE DE COLISÃO POR ENERGIAS E DANOS - COLISÃO COLINEAR</a><br><br>
+                    
+                                              <a href="./COLISÃO EXCÊNTRICA.html" >VELOCIDADE DE COLISÃO POR ENERGIAS E DANOS - COLISÃO EXCÊNTRICA</a><br><br>
+                    
+                                              <a href="./No plano.html" >PARCELAS DE ARRASTAMENTO / ATRITAMENTO / DERRAPAGEM</a><br><br>
+                    
+                                              <a href="./Velocidade por distância de parada e reação.html" >VELOCIDADE POR DISTÂNCIA DE PARADA E PERCEPÇÃO / REAÇÃO</a><br><br>
+                    
+                                              <a href="./Manobra evasiva Total.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</a><br><br>
+                    
+                                              <a href="./Manobra evasiva.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</a><br><br>
+                    
+                                              <a href="./Coeficiente de atrito em rampa.html" >CA/FA EM RAMPA</a></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" >COLISÃO FRONTAL<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse">
+              <div class="panel-body">
+                      <a href="./COLISÃO COLINEAR.html"  >VELOCIDADE DE COLISÃO POR ENERGIAS E DANOS - COLISÃO COLINEAR</a><br><br>
+                    
+                                              <a href="./COLISÃO EXCÊNTRICA.html" >VELOCIDADE DE COLISÃO POR ENERGIAS E DANOS - COLISÃO EXCÊNTRICA</a><br><br>
+                    
+                                              <a href="./No plano.html" >PARCELAS DE ARRASTAMENTO / ATRITAMENTO / DERRAPAGEM</a><br><br>
+                    
+                                              <a href="./Velocidade por distância de parada e reação.html" >VELOCIDADE POR DISTÂNCIA DE PARADA E PERCEPÇÃO / REAÇÃO</a><br><br>
+                    
+                                              <a href="./Manobra evasiva Total.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</a><br><br>
+                    
+                                              <a href="./Manobra evasiva.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</a><br><br>
+                    
+                                              <a href="./Coeficiente de atrito em rampa.html" >CA/FA EM RAMPA</a></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" >COLISÃO TRANSVERSAL<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse">
+              <div class="panel-body">
+                      <a href="./COLISÃO COLINEAR.html"  >VELOCIDADE DE COLISÃO POR ENERGIAS E DANOS - COLISÃO COLINEAR</a><br><br>
+                    
+                                              <a href="./COLISÃO EXCÊNTRICA.html" >VELOCIDADE DE COLISÃO POR ENERGIAS E DANOS - COLISÃO EXCÊNTRICA</a><br><br>
+                                              
+                                              <a href="./PRINCÍPIO DA CONSERVAÇÃO DA QUANTIDADE DE MOVIMENTO.html" >VELOCIDADE DE COLISÃO POR QUANTIDADE DE MOVIMENTO</a><br><br>
+                    
+                                              <a href="./No plano.html" >PARCELAS DE ARRASTAMENTO / ATRITAMENTO / DERRAPAGEM</a><br><br>
+                    
+                                              <a href="./Velocidade por distância de parada e reação.html" >VELOCIDADE POR DISTÂNCIA DE PARADA E PERCEPÇÃO / REAÇÃO</a><br><br>
+                    
+                                              <a href="./Manobra evasiva Total.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</a><br><br>
+                    
+                                              <a href="./Manobra evasiva.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</a><br><br>
+                    
+                                              <a href="./Coeficiente de atrito em rampa.html" >CA/FA EM RAMPA</a></div>
+            </div>
+          </div>
+        </div> 
+      </div>
+      </div>
+      </div>
+          </div>
+        </div> 
+      </div>
+      
+      
+          
+      <div class="col-sm-2">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" ><center>TIPOS DE VARIÁVEIS</center><center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse">
+            
+              <div class="panel-body">
+       <div class="container1" >
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" >VELOCIDADE<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse10" class="panel-collapse collapse">
+              <div class="panel-body">
+      
+                <a href="./No plano.html" >PARCELAS DE ARRASTAMENTO / ATRITAMENTO / DERRAPAGEM</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA NA CURVA.html" >VELOCIDADE CRÍTICA DE CURVA</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (2 RAIOS).html" >VELOCIDADE CRÍTICA POR MARCAS DE DERRAPAGEM CIRCULAR (2 RAIOS)</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (1 RAIOS).html" >VELOCIDADE CRÍTICA POR MARCAS DE DERRAPAGEM CIRCULAR (1 RAIO)</a><br><br>
+                    
+                                              <a href="./Velocidade por distância de parada e reação.html" >VELOCIDADE POR DISTÂNCIA DE PARADA E PERCEPÇÃO / REAÇÃO</a><br><br>
+                    
+                                              <a href="./Atropelamento SEARLE pela projeção do pedestre.html" >VELOCIDADE DE ATROPELAMENTO POR LANÇAMENTO TOTAL (SEARLE)</a><br><br>
+                    
+                                              <a href="./Velocidade de circulacão da moto pelo encurtamento entre eixos(SEVERY).html" >VELOCIDADE POR ENCURTAMENTO DE DISTÂNCIA ENTRE-EIXOS DE MOTOCICLETAS</a><br><br>
+                    
+                                              <a href="./CAPOTAMENTO.html" >VELOCIDADE DE CAPOTAMENTO</a><br><br>
+                    
+                                              <a href="./TOMBAMENTO.html" >VELOCIDADE DE TOMBAMENTO</a><br><br>
+                    
+                                              <a href="./VELOCIDADE DE CAPOTAMENTO DE VEÍCULOS DE GRANDE PORTE.html" >VELOCIDADE DE TOMBAMENTO DE VEÍCULOS DE CARGA</a><br><br>
+                    
+                                              <a href="./Velocidade pelo deslocamento de Poste de concreto.html" >COLISÃO COM POSTE DE CONCRETO</a><br><br>
+                    
+                                              <a href="./Velocidade pelo deslocamento de objeto móvel.html" >COLISÃO COM OBJETO MÓVEL</a><br><br>
+                    
+                                              <a href="./Aquaplanagem veículos Modelo 01.html" >VELOCIDADE DE AQUAPLANAGEM 1 (PRESSÃO DOS PNEUS)</a><br><br>
+                    
+                                              <a href="./Aquaplanagem veículos Modelo Hidroplaneo(NAVIN).html" title="A expressão empírica não determina a velocidade precisa a partir da qual o veículo realiza uma aquaplanagem, só mostra a velocidade a partir da qual o mesmo entra em regime de aquaplanagem. A equação empírica só é válida para veículos leves"  >VELOCIDADE DE AQUAPLANAGEM 2 (PRESSÃO DOS PNEUS E SUPERFÍCIE DE CONTATO COM O SOLO)</a><br><br>
+                    
+                                              <a href="./Aquaplanagem veículos pesados(Caminhões).html" >VELOCIDADE DE AQUAPLANAGEM  PARA VEÍCULOS PESADOS</a><br><br>
+                    
+                                              <a href="./Saida de Pista em rampa.html" >VELOCIDADE DE SAÍDA DE PISTA EM RAMPA (LANÇAMENTO)</a><br><br>
+                    
+                                              <a href="./Modelo de rotação e translação do veículo.html" >VELOCIDADE DE ROTAÇÃO DE VEÍCULO</a><br><br>
+                    
+                                              <a href="./Velocidade pelo rompimento do Parabrisa.html" >VELOCIDADE DE ATROPELAMENTO POR DANO NO PARA-BRISA</a><br><br>
+                    
+                                              <a href="./Soma das Velocidades quadráticas.html" >SOMA DE VELOCIDADES (QUADRÁTICA)</a><br><br>
+                    
+                                              <a href="./.html" >VELOCIDADE POR DADOS DE DERRAPAGEM CIRCULAR</a><br><br>
+                    
+                                              <a href="./PRINCÍPIO DA CONSERVAÇÃO DA QUANTIDADE DE MOVIMENTO.html" >VELOCIDADE DE COLISÃO POR QUANTIDADE DE MOVIMENTO</a><br><br>
+                    
+                                              <a href="./COLISÃO COLINEAR.html" >VELOCIDADE DE COLISÃO POR ENERGIAS E DANOS - COLISÃO COLINEAR</a><br><br>
+                    
+                                              <a href="./COLISÃO EXCÊNTRICA.html" >VELOCIDADE DE COLISÃO POR ENERGIAS E DANOS - COLISÃO EXCÊNTRICA</a><br><br>
+                    
+                                              <a href="./Lançamento do motociclista por SEARLE.html" >VELOCIDADE POR LANÇAMENTO DE MOTOCICLISTA - SEARLE</a>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse11" >DISTÂNCIA / DIMENSÃO<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse">
+              <div class="panel-body">
+                <a href="./CENTRO DE MASSA.html" >CENTRO DE MASSA DE VEÍCULOS (PESAGEM)</a><br><br>
+                    
+                                              <a href="./CÁLCULO DO RAIO DA CURVA.html" >RAIO DE CURVA</a><br><br>
+                    
+                                              <a href="./Conversão de graus em percentual na Curva.html" >INCLINAÇÃO / RAMPA / VALOR</a><br><br>
+                    
+                                              <a href="./Distância de Visibilidade.html" >DISTÂNCIA DE VISIBILIDADE REAL POR SITUAÇÃO SIMULADA (NOTURNA)</a><br><br>
+                    
+                                              <a href="./Distância de Frenagem.html" >DISTÂNCIA DE FRENAGEM / ARRASTAMENTO PELA VELOCIDADE</a><br><br>
+                    
+                                              <a href="./Distância de Frenagem e percepção.html" >DISTÂNCIA DE PERCEPÇÃO / REAÇÃO E FRENAGEM/ARRASTAMENTO PELA VELOCIDADE E TEMPO DE REAÇÃO / PERCEPÇÃO</a><br><br>
+                    
+                                              <a href="./Distância de percepção  reação  acionamento.html" >DISTÂNCIA DE PERCEPÇÃO/ACIONAMENTO / REAÇÃO</a><br><br>
+                    
+                                              <a href="./Manobra evasiva Total.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</a><br><br>
+                    
+                                              <a href="./Manobra evasiva.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</a><br><br>
+                    
+                                              <a href="./Atropelamento SEARLE pela projeção do pedestre distancia.html" >DISTÂNCIA DE ATROPELAMENTO PELA VELOCIDADE (SEARLE)</a>
+        </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse12" >COEFICIENTE DE ATRITO<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse12" class="panel-collapse collapse">
+              <div class="panel-body">
+                      <a href="./COEFICIENTE DE ATRITO MÉDIO.html" >CA/FA  MÉDIO</a><br><br>
+                    
+                                              <a href="./Coeficiente de atrito em rampa.html" >CA/FA EM RAMPA</a><br><br>
+                    
+                                              <a href="./CAFA x DESACELERAÇÃO.html" >CAFA x DESACELERAÇÃO</a><br><br>
+                    
+                                              <a href="./CAPOTABILIDADE.html" >CAPOTABILIDADE</a>
+        </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+      </div>
+            </div>
+          </div>
+        </div> 
+        </div>
+        
+        
+        <div class="col-sm-3">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse13" ><center>TIPOS DE ENVOLVIDOS</center><center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse">
+            
+              <div class="panel-body"><div class="container1">
+        
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse14" >MOTOCICLETAS<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse14" class="panel-collapse collapse">
+              <div class="panel-body">
+      
+                <a href="./Velocidade de circulacão da moto pelo encurtamento entre eixos(SEVERY).html" >VELOCIDADE POR ENCURTAMENTO DE DISTÂNCIA ENTRE-EIXOS DE MOTOCICLETAS</a><br><br>
+                    
+                                              <a href="./No plano.html" >PARCELAS DE ARRASTAMENTO / ATRITAMENTO / DERRAPAGEM</a><br><br>
+                    
+                                              <a href="./PRINCÍPIO DA CONSERVAÇÃO DA QUANTIDADE DE MOVIMENTO.html" >VELOCIDADE DE COLISÃO POR QUANTIDADE DE MOVIMENTO</h4></a><br><br>
+                    
+                                              <a href="./COEFICIENTE DE ATRITO MÉDIO.html" >CA/FA  MÉDIO</a><br><br>
+                    
+                                              <a href="./Lançamento do motociclista por SEARLE.html" >VELOCIDADE POR LANÇAMENTO DE MOTOCICLISTA - SEARLE</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (1 RAIOS).html" >VELOCIDADE CRÍTICA DE CURVA SIMPLIFICADA</a><br><br>
+                    
+                                              <a href="./VELOCIDADE CRÍTICA NA CURVA.html" >VELOCIDADE CRÍTICA DE CURVA</a><br><br>
+                    
+                                              <a href="./VELOCIDADE DE IMPACTO DA MOTOCICLETA EM COLISÃO COM AUTOMÓVEIS.html" >COLISÃO MOTOCICLETA X AUTOMÓVEL</a>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse15" >PEDESTRES<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse15" class="panel-collapse collapse">
+              <div class="panel-body">
+                <a href="./Atropelamento SEARLE pela projeção do pedestre.html" >VELOCIDADE DE ATROPELAMENTO POR LANÇAMENTO TOTAL (SEARLE)</a><br><br>
+                    
+                                              <a href="./Distância de Visibilidade.html" >DISTÂNCIA DE VISIBILIDADE REAL POR SITUAÇÃO SIMULADA (NOTURNA)</a><br><br>
+                    
+                                              <a href="./Distância de Frenagem.html" >DISTÂNCIA DE FRENAGEM / ARRASTAMENTO PELA VELOCIDADE</a><br><br>
+                    
+                                              <a href="./Distância de Frenagem e percepção.html" >DISTÂNCIA DE PERCEPÇÃO / REAÇÃO E FRENAGEM/ARRASTAMENTO PELA VELOCIDADE E TEMPO DE REAÇÃO / PERCEPÇÃO</a><br><br>
+                    
+                                              <a href="./Distância de percepção  reação  acionamento.html" >DISTÂNCIA DE PERCEPÇÃO / ACIONAMENTO / REAÇÃO</a><br><br>
+                    
+                                              <a href="./Manobra evasiva Total.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</a><br><br>
+                    
+                                              <a href="./Manobra evasiva.html" >DISTÂNCIA NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</a><br><br>
+                    
+                                              <a href="./Atropelamento SEARLE pela projeção do pedestre distancia.html" >DISTÂNCIA DE ATROPELAMENTO PELA VELOCIDADE (SEARLE)</a><br><br>
+                    
+                                              <a href="./Conversão de graus em percentual na Curva.html" >INCLINAÇÃO / RAMPA / VALOR</a><br><br>
+                    
+                                              <a href="./Velocidade pelo rompimento do Parabrisa.html" >VELOCIDADE DE ATROPELAMENTO POR DANO NO PARA-BRISA</a>
+        </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse16" >CAMINHÕES<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse16" class="panel-collapse collapse">
+              <div class="panel-body">
+                      <a href="./Aquaplanagem veículos pesados(Caminhões).html" >VELOCIDADE DE AQUAPLANAGEM  PARA VEÍCULOS PESADOS</a><br><br>
+                    
+                                              <a href="./VELOCIDADE DE CAPOTAMENTO DE VEÍCULOS DE GRANDE PORTE.html" >VELOCIDADE DE TOMBAMENTO DE VEÍCULOS DE CARGA</a>
+        </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+      </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+      
+      <div class="col-sm-3">
+      <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse17" ><center>TABELAS E FORMULAS BÁSICAS</center><center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse17" class="panel-collapse collapse">
+            
+              <div class="panel-body"><div class="container1">
+        
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse18" >TABELAS E VALORES DE REFERÊNCIA<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse18" class="panel-collapse collapse">
+              <div class="panel-body">
+      
+                <a href="./Lista de coeficientes de atrito em situações diversas.html" >Tabela A1- Tabela de coeficientes de atrito em situações diversas</a><br><br>
+                    
+                                              <a href="./Lista de coeficientes de atrito rodoviário.html" >Tabela A2 – Tabela de coeficientes de atrito rodoviário</a><br><br>
+                    
+                                    <a href="./Lista de coeficientes de atrito por tipo de veículo.html" >Tabela A3 – Tabela de coeficientes de atrito por tipo de veículo</a><br><br>
+                    
+                                              <a href="./Lista de coeficientes de atrito rodoviário geral.html" >Tabela A4 – Tabela de coeficientes de atrito rodoviário geral</a><br><br>
+                    
+                                              <a href="./Lista de coeficientes de atrito por condições dos pneumáticos.html" >Tabela A5 – Tabela de coeficientes de atrito por condições dos pneumáticos</a><br><br>
+                    
+                                              <a href="./Lista de coeficientes de atrito em função da velocidade.html" >Tabela A6 – Tabela de coeficientes de atrito em função da velocidade</a><br><br>
+                    
+                                              <a href="./Lista de coeficientes de atrito por tipo de veículos.html" >Tabela A7 – Tabela de coeficientes de atrito por tipo de veículos</a><br><br>
+                    
+                                              <a href="./Lista de coeficientes de atrito em função da velocidade.html" >Tabela A8 – Tabela de coeficientes de atrito em função da velocidade</a><br><br>
+                    
+                                              <a href="./Lista de coeficientes de atrito em situações diversas 2.html" >Tabela A9 – Tabela de coeficientes de atrito em situações diversas</a><br><br>
+                    
+                                              <a href="./Lista de coeficientes de atrito em função da velocidade e das condições dos pneumáticos.html" >Tabela A10 – Tabela de coeficientes de atrito em função da velocidade e das condições dos pneumáticos</a><br><br>
+                    
+                                              <a href="./Lista de coeficiente de atrito em relação ao tipo de veículo e peso.html" >Tabela A11 – Tabela de coeficiente de atrito em relação ao tipo de veículo</a><br><br>
+                    
+                                              <a href="./Lista de coeficientes de atrito para motocicletas em função do peso.html" >Tabela A12 – Tabela dos coeficientes de atrito para motocicletas em função do peso</a><br><br>
+                    
+                                              <a href="./TABELA GENÉRICA DE DADOS TÉCNICOS DE VEÍCULOS.html" >TABELA GENÉRICA DE DADOS TÉCNICOS DE VEÍCULOS</a>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse19" >FÓRMULAS BÁSICAS<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse19" class="panel-collapse collapse">
+              <div class="panel-body">
+                <a href="./Velocidade pela energia cinética.html" >VELOCIDADE PELA ENERGIA CINÉTICA</a><br><br>
+                    
+                                              <a href="./Energia cinética pela velocidade.html" >ENERGIA CINÉTICA PELA VELOCIDADE</a><br><br>
+                    
+                                              <a href="./Velocidade média.html" >VELOCIDADE MÉDIA</a><br><br>
+                    
+                                              <a href="./Soma das Velocidades quadráticas.html" >SOMA DE VELOCIDADES (QUADRÁTICA)</a><br><br>
+                    
+                                              <a href="./CENTRO DE MASSA.html" >CENTRO DE MASSA DE VEÍCULOS (PESAGEM)</a>
+        </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+      </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div class="col-sm-2">
+        <div class="panel-group" id="accordion" >
+          <div class="panel panel-default">
+            <div class="panel-heading" style="margin:0%">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse20" ><center>CRÉDITOS</center><center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse20" class="panel-collapse collapse">
+            
+              <div class="panel-body"><div class="container1">
+        
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse21" >CRIAÇÃO E IDEALIZAÇÃO<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse21" class="panel-collapse collapse">
+              <div class="panel-body">	
+                <a href="http://lattes.cnpq.br/9489305457809784" target="_blank" >DIOGO LEANDRO PAIVA RAMOS (PRF)</a><br><br>
+      
+                <a href="http://lattes.cnpq.br/9741036563166320" target="_blank" >JEFERSON JOHN DE SOUZA LIMA (PRF)</a>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse22" >DESENVOLVEDOR DO SITE<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse22" class="panel-collapse collapse">
+              <div class="panel-body">
+                <a href="http://lattes.cnpq.br/9436394155540363" target="_blank" >JOSÉ GUILHERME SANTOS ROCHA (PRF/UFS)</a>
+        </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse23" >CONTRIBUIÇÃO E REVISÃO<center><span class="caret"></center></span></a>
+              </h4>
+            </div>
+            <div id="collapse23" class="panel-collapse collapse">
+              <div class="panel-body">
+                      <a href="," target="_blank" >Instrutores do Curso de Perícia em Acidentes de Trânsito da PRF (CPER/PRF)</a><br><br>
+                      <a href="," target="_blank" >Grupo de Investigação de Acidentes de Trânsito de Sergipe da PRF (GIAT/SE)</a>
+        </div>
+            </div>
+          </div>
+          
+          </div>
+        </div> 
+      </div>
+      </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+
+
+<script src="drop.js"></script>
+
+<script src="pagina.js"></script>
+
+
+</section></main></body>
+
+
+</div>
+
+<footer class="app-footer">
+    <span><strong style="font-size: 14px;font-weight: bold;">Sistema Integrado de Perícia</strong></span>
+    <span title="Descrição:  Retira automatismo para busca no Infoconv 
+            Hash: a1fbbe4 
+            Autor:  Thyago " class="ml-auto">
+            <small class="text-muted" style="font-size: 11px;">
+                Versão: - Data: 01/01/2020 00:00
+            </small>
+    </span>
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- CoreUI main scripts -->
+
+
+
+<!-- Plugins and scripts required by this views -->
+
+</body>
+</html>

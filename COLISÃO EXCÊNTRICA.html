@@ -1,0 +1,956 @@
+﻿
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="PRF - Sistema Integrado de Perícia">
+    <meta name="author" content="PRF/SIP">
+    <meta name="csrf-token" content="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+    <meta id="_token" value="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+
+    <link rel="shortcut icon" href="https://sicop.prf.gov.br/sicop/favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="jspdf.min.js"></script>
+  <script type="text/javascript" src="1.5.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- Icons -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Main styles for this application -->
+    <link href="https://sicop.prf.gov.br/sicop/build/css/all.css?id=524d9076de909eaa44c0" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+    
+
+</head>
+
+<body class="app header-fixed sidebar-fixed sidebar-lg-show">
+<header class="app-header navbar">
+            <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="https://sicop.prf.gov.br/sicop/prf.png" width="89" height="25" alt="PRF">
+    </a>
+            <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-xl-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+    <a  href="./login.html" class="nome-sistema d-md-down-none" >
+        SIP
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown d-md-down-none">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+               aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bars"></i>
+                <span class="hidden-xs-down" >Sistemas</span>
+                
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a target="_blank" href="https://www170.prf.gov.br/alertabrasil" class="dropdown-item "><i
+                    class="far fa-square"></i> Alerta Brasil</a>
+                                                                <a target="_blank" href="https://www170.prf.gov.br/alertacentral" class="dropdown-item "><i
+                    class="far fa-square"></i> Alerta Brasil 2</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/novobat" class="dropdown-item "><i
+                    class="far fa-square"></i> BAT</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/bop" class="dropdown-item "><i
+                    class="far fa-square"></i> BOP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/pdi" class="dropdown-item "><i
+                    class="far fa-square"></i> PDI</a>
+                                                                <a target="_blank" href="https://sei.prf.gov.br/" class="dropdown-item "><i
+                    class="far fa-square"></i> SEI</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/sicop" class="dropdown-item "><i
+                    class="far fa-square"></i> SICOP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/silver" class="dropdown-item "><i
+                    class="far fa-square"></i> SILVER</a>
+                                                                <a href="#" class="dropdown-item active"><i
+                    class="far fa-check-square"></i> SIP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/multa2" class="dropdown-item "><i
+                    class="far fa-square"></i> SISCOM</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/sisnar" class="dropdown-item "><i
+                    class="far fa-square"></i> SISNAR</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/webmail" class="dropdown-item "><i
+                    class="far fa-square"></i> WebMail</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/wikiprf" class="dropdown-item "><i
+                    class="far fa-square"></i> WikiPRF</a>
+                                                </div>
+        </li>
+        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user"></i>
+                    <span class="d-md-down-none"></span>
+                    
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    
+                    
+                    
+                    <form action="https://sicop.prf.gov.br/sicop/logout" method="post">
+                        <input type="hidden" name="_token" value="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+                        <button type="submit" class="dropdown-item">
+                            <i class="fa fa-power-off"></i> <b>Sair</b>
+                        </button>
+                    </form>
+                </div>
+                    </li>
+    </ul>
+
+</header>
+
+<div class="app-body" id="site">
+ 
+
+    <div class="sidebar" >
+
+      <button class="w3-button w3-block w3-left-align w3-hover-blue"  onclick="location.href='./inicio.html'">
+        <i class="fa fa-home"> CALCPRF - Início</i>
+      </button>
+      
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc()">
+        COEFICENTE DE ATRITO  <i class="fa fa-caret-down"></i>
+      </button>
+        <div id="demoAcc" class="w3-hide w3-white w3-card">
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./CAFA x DESACELERAÇÃO.html'">CONTRA A DESACELERAÇÃO</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./COEFICIENTE DE ATRITO EM RAMPA.html'">EM RAMPA</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./COEFICIENTE DE ATRITO MÉDIO.html'">MÉDIO</button>
+        </div>
+
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc1()">
+        COLISÃO  <i class="fa fa-caret-down"></i>
+      </button>
+        <div id="demoAcc1" class="w3-hide w3-white w3-card">
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade pelo deslocamento de objeto móvel.html'">COM OBJETO MÓVEL</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade pelo deslocamento de Poste de concreto.html'">COM POSTE DE CONCRETO</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE DE IMPACTO DA MOTOCICLETA EM COLISÃO COM AUTOMÓVEIS.html'">MOTOCICLETA X AUTOMÓVEL</button>
+        </div>
+            
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc2()">
+        DISTÂNCIA  <i class="fa fa-caret-down"></i>
+      </button>
+        <div id="demoAcc2" class="w3-hide w3-white w3-card">
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Atropelamento SEARLE pela projeção do pedestre distancia.html'">DE ATROPELAMENTO PELA VELOCIDADE</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Frenagem.html'">DE FRENAGEM / ARRASTAMENTO PELA VELOCIDADE</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de percepção  reação  acionamento.html'">DE PERCEPÇÃO / ACIONAMENTO / REAÇÃO</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Frenagem e percepção.html'">DE PERCEPÇÃO / REAÇÃO E FRENAGEM / ARRASTAMENTO PELA VELOCIDADE E TEMPO DE REAÇÃO</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Visibilidade.html'">DE VISIBILIDADE REAL POR SITUAÇÃO SIMULADA (NOTURNA)</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Manobra evasiva Total.html'">NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Manobra evasiva.html'">NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</button>
+        </div>
+    
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc3()">
+        PRINCÍPIO DA CONSERVAÇÃO DA ENERGIA  <i class="fa fa-caret-down"></i>
+      </button>
+        <div id="demoAcc3" class="w3-hide w3-white w3-card">
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./No Aclive.html'">NO ACLIVE</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./No Declive.html'">NO DECLIVE</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./No Plano.html'">NO PLANO</button>
+        </div>
+
+        <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc4()">
+          TABELA  <i class="fa fa-caret-down"></i>
+        </button>
+          <div id="demoAcc4" class="w3-hide w3-white w3-card">
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito em situações diversas.html'">ATRITO EM SITUAÇÕES DIVERSAS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito rodoviário.html'">ATRITO RODOVIÁRIO</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito por tipo de veículo.html'">ATRITO POR TIPO DE VEÍCULO</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito rodoviário geral.html'">ATRITO RODOVIÁRIO GERAL</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito por condições dos pneumáticos.html'">ATRITO POR CONDIÇÕES DOS PNEUMÁTICOS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito em função da velocidade.html'">ATRITO EM FUNÇÃO DA VELOCIDADE</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito por tipo de veículos.html'">ATRITO POR TIPO DE VEÍCULOS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito em situações diversas 2.html'">ATRITO EM SITUAÇÕES DIVERSAS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito em função da velocidade e das condições dos pneumáticos.html'">ATRITO EM FUNÇÃO DA VELOCIDADE E DAS CONDIÇÕES DOS PNEUMÁTICOS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficiente de atrito em relação ao tipo de veículo e peso.html'">ATRITO EM RELAÇÃO AO TIPO DE VEÍCULO
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito para motocicletas em função do peso.html'">ATRITO PARA MOTOCICLETAS EM FUNÇÃO DO PESO</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./TABELA GENÉRICA DE DADOS TÉCNICOS DE VEÍCULOS.html'">GENÉRICA DE DADOS TÉCNICOS DE VEÍCULOS</button>
+          </div>
+
+        <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc5()">
+          VELOCIDADE  <i class="fa fa-caret-down"></i>
+        </button>
+          <div id="demoAcc5" class="w3-hide w3-white w3-card">
+            <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc6()">
+              CRÍTICA  <i class="fa fa-caret-down"></i>
+            </button>
+              <div id="demoAcc6" class="w3-hide w3-white w3-card w3-hover-grey">
+                <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE CRÍTICA NA CURVA.html'">NA CURVA</button>
+                <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (1 RAIOS).html'">POR MARCAS DE DERRAPAGEM (1 RAIOS)</button>
+                <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (2 RAIOS).html'">POR MARCAS DE DERRAPAGEM CIRCULAR (2 RAIOS)</button>
+              </div>
+
+              <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc7()">
+                DE AQUAPLANAGEM  <i class="fa fa-caret-down"></i>
+              </button>
+                <div id="demoAcc7" class="w3-hide w3-white w3-card">
+                  <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Aquaplanagem veículos Modelo 01.html'">1 (PRESSÃO DOS PNEUS)</button>
+                  <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Aquaplanagem veículos Modelo Hidroplaneo(NAVIN).html'">2 (PRESSÃO DOS PNEUS E SUPERFÍCIE DE CONTATO COM O SOLO)</button>
+                  <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Aquaplanagem veículos pesados(Caminhões).html'">PARA VEÍCULOS PESADOS</button>
+                </div>
+
+                <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc8()">
+                  DE ATROPELAMENTO  <i class="fa fa-caret-down"></i>
+                </button>
+                  <div id="demoAcc8" class="w3-hide w3-white w3-card">
+                    <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade pelo rompimento do Parabrisa.html'">POR DANO NO PARA-BRISA</button>
+                    <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Atropelamento SEARLE pela projeção do pedestre.html'">POR LANÇAMENTO TOTAL (SEARLE)</button>
+                  </div>
+
+                  <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc9()">
+                    DE COLISÃO  <i class="fa fa-caret-down"></i>
+                  </button>
+                    <div id="demoAcc9" class="w3-hide w3-white w3-card">
+                      <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./COLISÃO COLINEAR.html'">COLINEAR</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./COLISÃO EXCÊNTRICA.html'">EXCÊNTRICA</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./PRINCÍPIO DA CONSERVAÇÃO DA QUANTIDADE DE MOVIMENTO.html'">POR QUANTIDADE DE MOVIMENTO</button>
+                    </div>
+
+                    <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc10()">
+                      DE TOMBAMENTO  <i class="fa fa-caret-down"></i>
+                    </button>
+                      <div id="demoAcc10" class="w3-hide w3-white w3-card">
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./TOMBAMENTO.html'">GERAL</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE DE CAPOTAMENTO DE VEÍCULOS DE GRANDE PORTE.html'">PARA VEÍCULOS DE CARGA</button>
+                      </div>
+                      
+                    <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc11()">
+                      DEMIAS FÓRMULAS PARA VELOCIDADE  <i class="fa fa-caret-down"></i>
+                    </button>
+                      <div id="demoAcc11" class="w3-hide w3-white w3-card">
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./CAPOTAMENTO.html'">VELOCIDADE DE CAPOTAMENTO</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Modelo de rotação e translação do veículo.html'">VELOCIDADE DE ROTAÇÃO DE VEÍCULO</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Saida de Pista em rampa.html'">VELOCIDADE DE SAÍDA DE PISTA EM RAMPA (LANÇAMENTO)</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade média.html'">VELOCIDADE MÉDIA</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade pela energia cinética.html'">VELOCIDADE PELA ENERGIA CINÉTICA<button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade por distância de parada e reação.html'">VELOCIDADE POR DISTÂNCIA DE PARADA E PERCEPÇÃO / REAÇÃO</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade de circulacão da moto pelo encurtamento entre eixos(SEVERY).html'">VELOCIDADE POR ENCURTAMENTO DE DISTÂNCIA ENTRE - EIXOS DE MOTOCICLETAS</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lançamento do motociclista por SEARLE.html'">VELOCIDADE POR QUANTIDADE DE MOVIMENTO</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Soma das Velocidades quadráticas.html'">SOMA DE VELOCIDADES QUADRÁTICAS</button>
+                      </div>
+          </div>
+
+          <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc12()">
+            OUTROS CÁLCULOS  <i class="fa fa-caret-down"></i>
+          </button>
+            <div id="demoAcc12" class="w3-hide w3-white w3-card">
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Atropelamento SEARLE pela projeção do pedestre distancia.html'">DE ATROPELAMENTO PELA VELOCIDADE</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Frenagem.html'">DE FRENAGEM / ARRASTAMENTO PELA VELOCIDADE</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de percepção  reação  acionamento.html'">DE PERCEPÇÃO / ACIONAMENTO / REAÇÃO</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Frenagem e percepção.html'">DE PERCEPÇÃO / REAÇÃO E FRENAGEM / ARRASTAMENTO PELA VELOCIDADE E TEMPO DE REAÇÃO</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Visibilidade.html'">DE VISIBILIDADE REAL POR SITUAÇÃO SIMULADA (NOTURNA)</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Manobra evasiva Total.html'">NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Manobra evasiva.html'">NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</button>
+            </div>
+          
+                        
+
+                        
+    </div>
+
+    <!-- Main content -->
+    <main class="main">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <div class="noScreen"><img class="b" src="PRF.png" style="width:100%;height:auto"></div>
+<center><h2 class="a" style="font-weight: bold;font-family: Times New Roman, Times, serif;" >
+			VELOCIDADE DE COLISÃO POR ENERGIAS E DANOS - COLISÃO EXCÊNTRICA
+		</h1>
+	</center>
+<br>
+<!DOCTYPE html>
+<head>
+    <title>COLISÃO EXCÊNTRICA</title>
+    <meta charset="utf-8" />
+    <script>
+function Projecao() {
+    document.priceOptionForm.Projecao();
+    document.priceOptionForm.method='post';
+}
+document.onkeydown = function () {
+    if (window.event.keyCode == '13') {
+        Projecao();
+    }
+}
+      function  Projecao(){
+              var obj1 = document.getElementById("de1Id");
+
+              var obj2 = document.getElementById("cv1Id");
+
+              var obj3 = document.getElementById("lv1Id");
+
+              var obj4 = document.getElementById("mv1Id");
+
+              var obj5 = document.getElementById("dcf1Id");
+
+              var obj6 = document.getElementById("dcl1Id");
+
+              var obj7 = document.getElementById("dc1Id");
+
+              var obj8 = document.getElementById("d11Id");
+
+              var obj9 = document.getElementById("d21Id");
+
+              var obj10 = document.getElementById("d31Id");
+
+              var obj11 = document.getElementById("d41Id");
+
+              var obj12 = document.getElementById("d51Id");
+
+              var obj13 = document.getElementById("d61Id");
+
+              var obj14 = document.getElementById("lt1Id");
+
+              var obj15 = document.getElementById("pd1Id");
+
+              var obj16 = document.getElementById("CFAId");
+
+              var obj17 = document.getElementById("de2Id");
+
+              var obj18 = document.getElementById("cv2Id");
+
+              var obj19 = document.getElementById("lv2Id");
+
+              var obj20 = document.getElementById("mv2Id");
+
+              var obj21 = document.getElementById("dcf2Id");
+
+              var obj22 = document.getElementById("dcl2Id");
+
+              var obj23 = document.getElementById("dc2Id");
+
+              var obj24 = document.getElementById("d12Id");
+
+              var obj25 = document.getElementById("d22Id");
+
+              var obj26 = document.getElementById("d32Id");
+
+              var obj27 = document.getElementById("d42Id");
+
+              var obj28 = document.getElementById("d52Id");
+
+              var obj29 = document.getElementById("d62Id");
+
+              var obj30 = document.getElementById("lt2Id");
+
+              var obj31 = document.getElementById("pd2Id");
+
+              var obj32 = document.getElementById("CFA2Id");
+
+              var obj34 = document.getElementById("CFBId");
+
+              var obj35 = document.getElementById("CFB2Id");
+
+
+              var obj33 = document.getElementById("totalId");
+
+
+              var de1 = obj1.value;
+
+              var cv1 = obj2.value;
+
+              var lv1 = obj3.value;
+
+              var mv1 = obj4.value;
+
+              var dcf1 = obj5.value;
+
+              var dcl1 = obj6.value;
+
+              var dc1 = obj7.value;
+
+              var d11 = obj8.value;
+
+              var d21 = obj9.value;
+
+              var d31 = obj10.value;
+
+              var d41 = obj11.value;
+
+              var d51 = obj12.value;
+
+              var d61 = obj13.value;
+
+              var lt1 = obj14.value;
+
+              var pd1 = obj15.value;
+
+              var CFA = obj16.value;
+
+              var de2 = obj17.value;
+
+              var cv2 = obj18.value;
+
+              var lv2 = obj19.value;
+
+              var mv2 = obj20.value;
+
+              var dcf2 = obj21.value;
+
+              var dcl2 = obj22.value;
+
+              var dc2 = obj23.value;
+
+              var d12 = obj24.value;
+
+              var d22 = obj25.value;
+
+              var d32 = obj26.value;
+
+              var d42 = obj27.value;
+
+              var d52 = obj28.value;
+
+              var d62 = obj29.value;
+
+              var lt2 = obj30.value;
+
+              var pd2 = obj31.value;
+
+              var CFA2 = obj32.value;
+
+              var CFB = obj34.value;
+
+              var CFB2 = obj35.value;
+	      
+
+
+	      //Veículo 1
+
+
+              
+              var LD = lt1/5;
+              de1 = (de1*100)/2.54;
+              cv1 = (cv1*100)/2.54;
+              dcf1 = (dcf1*100)/2.54;
+              dcl1 = (dcl1*100)/2.54;
+              lv1 = (lv1*100)/2.54;
+
+              dc1 = dc1/2.54;
+              
+              d11 = d11/2.54;
+              
+              d21 = d21/2.54;
+              
+              d31 = d31/2.54;
+              
+              d41 = d41/2.54;
+              
+              d51 = d51/2.54;
+              
+              d61 = d61/2.54;
+              
+              lt1 = lt1/2.54;
+
+              var lt1c = lt1/5;
+              var az11 = ((parseFloat(d11)+parseFloat(d21))/2)*lt1c;
+              var az21 = ((parseFloat(d21)+parseFloat(d31))/2)*lt1c;
+              var az31 = ((parseFloat(d31)+parseFloat(d41))/2)*lt1c;
+              var az41 = ((parseFloat(d41)+parseFloat(d51))/2)*lt1c;
+              var az51 = ((parseFloat(d51)+parseFloat(d61))/2)*lt1c;
+
+
+              var cz11 =(parseFloat(dc1)+parseFloat(1*lt1c))-((lt1c*(parseFloat(2*d11)+parseFloat(d21)))/(3*(parseFloat(d11)+parseFloat(d21))));
+              var cz21 =(parseFloat(dc1)+parseFloat(2*lt1c))-((lt1c*(parseFloat(2*d21)+parseFloat(d31)))/(3*(parseFloat(d21)+parseFloat(d31))));
+              var cz31 =(parseFloat(dc1)+parseFloat(3*lt1c))-((lt1c*(parseFloat(2*d31)+parseFloat(d41)))/(3*(parseFloat(d31)+parseFloat(d41))));
+              var cz41 =(parseFloat(dc1)+parseFloat(4*lt1c))-((lt1c*((2*d41)+parseFloat(d51)))/(3*(parseFloat(d41)+parseFloat(d51))));
+              var cz51 =(parseFloat(dc1)+parseFloat(5*lt1c))-((lt1c*(parseFloat(2*d51)+parseFloat(d61)))/(3*(parseFloat(d51)+parseFloat(d61))));
+
+
+              var z11 = az11*cz11;
+              var z21 = az21*cz21;
+              var z31 = az31*cz31;
+              var z41 = az41*cz41;
+              var z51 = az51*cz51;
+
+
+              var ZT = (parseFloat(z11)+parseFloat(z21)+parseFloat(z31)+parseFloat(z41)+parseFloat(z51))/(parseFloat(az11)+parseFloat(az21)+parseFloat(az31)+parseFloat(az41)+parseFloat(az51));
+
+
+	      var AD = (lt1/10)*((parseFloat(d11)+parseFloat(2*d21)+parseFloat(2*d31)+parseFloat(2*d41)+parseFloat(2*d51)+parseFloat(d61)));
+
+	      var DM = AD/lt1;
+
+	      var PLx = (parseFloat(d11*d11)+parseFloat(2*(d21*d21))+parseFloat(2*(d31*d31))+parseFloat(2*(d41*d41))+parseFloat(2*(d51*d51))+parseFloat(d61*d61)+parseFloat(d11*d21)+parseFloat(d21*d31)+parseFloat(d31*d41))/(3*(parseFloat(d11)+parseFloat(2*d21)+parseFloat(2*d31)+parseFloat(2*d41)+parseFloat(2*d51)+parseFloat(d61)))
+
+	      var PLxv = dcf1-parseFloat(PLx);
+
+	      
+		
+		var A = (CFA*CFA)/(2*CFB);
+
+		LD = LD.toFixed(2)
+
+		A = A.toFixed(2)
+
+		AD = AD.toFixed(2)
+
+		DM = DM.toFixed(2)
+
+		PLx = PLx.toFixed(2)
+
+		ZT = ZT.toFixed(2)
+
+		PLxv = PLxv.toFixed(2)
+		
+		var PLyv = parseFloat(ZT) - parseFloat(dcl1);
+		PLyv = PLyv.toFixed(2)
+
+		var E = (((lt1/5*((CFA/2)*(parseFloat(d11)+(2*d21)+(2*d31)+(2*d41)+(2*d51)+parseFloat(d61))+(CFB/6*((d11*d11)+(2*(d21*d21))+(2*(d31*d31))+(2*(d41*d41))+(2*(d51*d51))+(d61*d61)+(d11*d21)+(d21*d31)+(d31*d41)+(d41*d51)+(d51*d61)))+(5*A))))*(parseFloat(1)+((Math.tan(pd1*0.01745329252))*(Math.tan(pd1*0.01745329252)))))*0.112984825;
+		E = E.toFixed(2)
+
+		var BA = parseFloat(PLxv*(Math.sin(pd1*0.01745329252)))-parseFloat(PLyv*(Math.cos(pd1*0.01745329252)));
+		BA = BA.toFixed(2)
+		
+		var RG = Math.sqrt((parseFloat(cv1*cv1)+parseFloat(de1*de1))/13.1);
+		RG = RG.toFixed(2)
+
+
+
+
+	      //Veículo 2
+
+
+	      
+
+              var LD2 = lt2/5;
+              de2 = (de2*100)/2.54;
+              cv2 = (cv2*100)/2.54;
+              dcf2 = (dcf2*100)/2.54;
+              dcl2 = (dcl2*100)/2.54;
+              lv2 = (lv2*100)/2.54;
+
+              dc2 = dc2/2.54;
+
+              d12 = d12/2.54;
+              var d1213 = d12*13;
+
+              d22 = d22/2.54;
+              var d2218 = d22*18;
+
+              d32 = d32/2.54;
+              var d326 = d32*6;
+
+              d42 = d42/2.54;
+              var d426 = d42*6;
+
+              d52 = d52/2.54;
+              var d5218 = d52*18;
+
+              d62 = d62/2.54;
+              var d6213 = d62*13;
+
+              lt2 = lt2/2.54;
+
+              var lt230 = lt2/30;
+
+              var dsoma = -parseFloat(d1213)-parseFloat(d2218)-parseFloat(d326)+parseFloat(d426)+parseFloat(d5218)+parseFloat(d6213);
+
+              var dmult = (parseFloat(d12)+parseFloat(2*d22)+parseFloat(2*d32)+parseFloat(2*d42)+parseFloat(2*d52)+parseFloat(d62));
+
+              var ZT2 = (dsoma/dmult)*lt230;
+
+              if(ZT2<0){
+              var abs = parseFloat(-1);}
+              else{
+              var abs = parseFloat(1);}
+
+
+              var lt2c = lt2/5;
+              var az12 = ((parseFloat(d12)+parseFloat(d22))/2)*lt2c;
+              var az22 = ((parseFloat(d22)+parseFloat(d32))/2)*lt2c;
+              var az32 = ((parseFloat(d32)+parseFloat(d42))/2)*lt2c;
+              var az42 = ((parseFloat(d42)+parseFloat(d52))/2)*lt2c;
+              var az52 = ((parseFloat(d52)+parseFloat(d62))/2)*lt2c;
+
+
+              var cz12 =(parseFloat(dc2)+parseFloat((1*lt2c)))-((lt2c*((2*d12)+parseFloat(d22)))/(3*(parseFloat(d12)+parseFloat(d22))));
+              var cz22 =(parseFloat(dc2)+parseFloat((2*lt2c)))-((lt2c*((2*d22)+parseFloat(d32)))/(3*(parseFloat(d22)+parseFloat(d32))));
+              var cz32 =(parseFloat(dc2)+parseFloat((3*lt2c)))-((lt2c*((2*d32)+parseFloat(d42)))/(3*(parseFloat(d32)+parseFloat(d42))));
+              var cz42 =(parseFloat(dc2)+parseFloat((4*lt2c)))-((lt2c*((2*d42)+parseFloat(d52)))/(3*(parseFloat(d42)+parseFloat(d52))));
+              var cz52 =(parseFloat(dc2)+parseFloat((5*lt2c)))-((lt2c*((2*d52)+parseFloat(d62)))/(3*(parseFloat(d52)+parseFloat(d62))));
+
+
+              var z12 = az12*cz12;
+              var z22 = az22*cz22;
+              var z32 = az32*cz32;
+              var z42 = az42*cz42;
+              var z52 = az52*cz52;
+
+
+              
+
+	      var AD2 = (lt2/10)*((parseFloat(d12)+parseFloat(2*d22)+parseFloat(2*d32)+parseFloat(2*d42)+parseFloat(2*d52)+parseFloat(d62)));
+
+	      var DM2 = AD2/lt2;
+
+	      var PLx2 = (parseFloat(d12*d12)+parseFloat(2*(d22*d22))+parseFloat(2*(d32*d32))+parseFloat(2*(d42*d42))+parseFloat(2*(d52*d52))+parseFloat(d62*d62)+parseFloat(d12*d22)+parseFloat(d22*d32)+parseFloat(d32*d42))/(3*(parseFloat(d12)+parseFloat(2*d22)+parseFloat(2*d32)+parseFloat(2*d42)+parseFloat(2*d52)+parseFloat(d62)))
+
+	      var PLxv2 = dcf2-parseFloat(PLx2);
+
+	      
+		
+		var A2 = (CFA2*CFA2)/(2*CFB2);
+
+		LD2 = LD2.toFixed(2)
+
+		A2 = A2.toFixed(2)
+
+		AD2 = AD2.toFixed(2)
+
+		DM2 = DM2.toFixed(2)
+
+		PLx2 = PLx2.toFixed(2)
+
+		ZT2 = ZT2.toFixed(2)
+
+		PLxv2 = PLxv2.toFixed(2)
+		
+		var PLyv2 = (abs*((parseFloat(lv2)-parseFloat(lt2))/2))-parseFloat(ZT2);
+
+		PLyv2 = PLyv2.toFixed(2)
+
+		var E2 = (((lt2/5*((CFA2/2)*(parseFloat(d12)+parseFloat(2*d22)+parseFloat(2*d32)+parseFloat(2*d42)+parseFloat(2*d52)+parseFloat(d62))+(CFB2/6*(parseFloat(d12*d12)+parseFloat(2*(d22*d22))+parseFloat(2*(d32*d32))+parseFloat(2*(d42*d42))+parseFloat(2*(d52*d52))+parseFloat(d62*d62)+parseFloat(d12*d22)+parseFloat(d22*d32)+parseFloat(d32*d42)+parseFloat(d42*d52)+parseFloat(d52*d62)))+parseFloat(5*A2))))*(parseFloat(1)+((Math.tan(pd2*0.01745329252))*(Math.tan(pd2*0.01745329252)))))*0.112984825;
+		E2 = E2.toFixed(2)
+
+		var BA2 = parseFloat(PLxv2*(Math.sin(pd2*0.01745329252)))-parseFloat(PLyv2*(Math.cos(pd2*0.01745329252)));
+		BA2 = BA2.toFixed(2)
+		
+		
+		var RG2 = Math.sqrt((parseFloat(cv2*cv2)+parseFloat(lv2*lv2))/13.1);
+		RG2 = RG2.toFixed(2)
+
+	      //Contas que envolvem ambos os veículos
+
+		
+		var RM = (((de1*de1)+(cv1*cv1))/13.1)/((((de1*de1)+(cv1*cv1))/13.1)+((((PLxv*(Math.sin(pd1*0.01745329252))))-(PLyv*(Math.cos(pd1*0.01745329252))))*(((PLxv*(Math.sin(pd1*0.01745329252))))-(PLyv*(Math.cos(pd1*0.01745329252))))));
+		RM = RM.toFixed(3)
+
+		var RM2 = (((lv2*lv2)+(cv2*cv2))/13.1)/((((lv2*lv2)+(cv2*cv2))/13.1)+((((PLxv2*(Math.sin(pd2*0.01745329252))))-(PLyv2*(Math.cos(pd2*0.01745329252))))*(((PLxv2*(Math.sin(pd2*0.01745329252))))-(PLyv2*(Math.cos(pd2*0.01745329252))))));
+		RM2 = RM2.toFixed(3)
+
+		var DV1 = (Math.sqrt(((2*RM*RM2*mv2)*(parseFloat(E)+parseFloat(E2)))/(mv1*(parseFloat(mv1*RM)+parseFloat(mv2*RM2)))))*3.6;
+		DV1 = DV1.toFixed(2)
+
+		var DV2 = (Math.sqrt(((2*RM*RM2*mv1)*(parseFloat(E)+parseFloat(E2)))/(mv1*(parseFloat(mv1*RM)+parseFloat(mv2*RM2)))))*3.6;
+		DV2 = DV2.toFixed(2)
+
+		var fz11 = (LD2/2.54)*((2*CFA2*CFB2*((d11*2.54)+(d21*2.54)))/(2*(Math.cos(pd1*0.01745329252))));
+		var fz21 = (LD2/2.54)*((2*CFA2*CFB2*((d21*2.54)+(d31*2.54)))/(2*(Math.cos(pd1*0.01745329252))));
+		var fz31 = (LD2/2.54)*((2*CFA2*CFB2*((d31*2.54)+(d41*2.54)))/(2*(Math.cos(pd1*0.01745329252))));
+		var fz41 = (LD2/2.54)*((2*CFA2*CFB2*((d41*2.54)+(d51*2.54)))/(2*(Math.cos(pd1*0.01745329252))));
+		var fz51 = (LD2/2.54)*((2*CFA2*CFB2*((d51*2.54)+(d61*2.54)))/(2*(Math.cos(pd1*0.01745329252))));
+
+		var FZ1 = (fz11+fz21+fz31+fz41+fz51)*4.448;
+		FZ1 = FZ1.toFixed(2)
+
+		var fz12 = (LD2/2.54)*((2*CFA2*CFB2*((d12*2.54)+(d22*2.54)))/(2*(Math.cos(pd2*0.01745329252))));
+		var fz22 = (LD2/2.54)*((2*CFA2*CFB2*((d22*2.54)+(d32*2.54)))/(2*(Math.cos(pd2*0.01745329252))));
+		var fz32 = (LD2/2.54)*((2*CFA2*CFB2*((d32*2.54)+(d42*2.54)))/(2*(Math.cos(pd2*0.01745329252))));
+		var fz42 = (LD2/2.54)*((2*CFA2*CFB2*((d42*2.54)+(d52*2.54)))/(2*(Math.cos(pd2*0.01745329252))));
+		var fz52 = (LD2/2.54)*((2*CFA2*CFB2*((d52*2.54)+(d62*2.54)))/(2*(Math.cos(pd2*0.01745329252))));
+
+		var FZ2 = (fz12+fz22+fz32+fz42+fz52)*4.448;
+
+		FZ2 = FZ2.toFixed(2);
+
+
+
+
+	        LD = LD.replace('.',',');
+
+	        LD2 = LD2.replace('.',',');
+
+	        A = A.replace('.',',');
+
+	        A2 = A2.replace('.',',');
+
+	        FZ1 = FZ1.replace('.',',');
+
+	        FZ2 = FZ2.replace('.',',');
+
+	        AD = AD.replace('.',',');
+
+	        AD2 = AD2.replace('.',',');
+
+	        DM = DM.replace('.',',');
+
+	        DM2 = DM2.replace('.',',');
+
+	        PLx = PLx.replace('.',',');
+
+	        ZT = ZT.replace('.',',');
+
+	        ZT2 = ZT2.replace('.',',');
+
+	        PLxv = PLxv.replace('.',',');
+
+	        PLyv = PLyv.replace('.',',');
+
+	        PLxv2 = PLxv2.replace('.',',');
+
+	        PLyv2 = PLyv2.replace('.',',');
+
+	        E = E.replace('.',',');
+
+	        E2 = E2.replace('.',',');
+
+	        DV1 = DV1.replace('.',',');
+
+	        DV2 = DV2.replace('.',',');
+
+	        RM = RM.replace('.',',');
+
+	        RM2 = RM2.replace('.',',');
+
+	        BA = BA.replace('.',',');
+
+	        BA2 = BA2.replace('.',',');
+
+	        RG = RG.replace('.',',');
+
+	        RG2 = RG2.replace('.',',');
+
+	      
+
+              obj33.value = "Veículo 1\nLargura de cada deformação C: "+ LD + " cm"+
+				"\nCoeficiente de rigidez G = "+ A + " in²"+
+				"\nÁrea da deformação = "+ AD + " in"+
+				"\nDeformação média = "+ DM + " in"+
+				"\nPosição longitudinal do centróide - x (área do dano) = "+ PLx + " in"+
+				"\nPosição longitudinal do centróide - y (área do dano) = "+ ZT + " in"+
+				"\nPosição longitudinal do centróide - x (eixos veículo) = "+ PLxv + " in"+
+				"\nPosição longitudinal do centróide - y (eixos veículo) = "+ PLyv + " in"+
+				"\nEnergia de deformação E = "+ E + " j"+
+				"\nBraço de alavanca = "+ BA + " in"+
+				"\nRaio de giro = "+ RG + " in"+
+				"\nRelação efetiva de massa = "+ RM +
+				"\nDelta V = "+ DV1 + " km/h"+
+				"\nForça de deformação = "+ FZ1 + " N"+
+
+
+				"\n\nVepiculo 2\nLargura de cada deformação C = "+ LD2 + " cm"+
+				"\nCoeficiente de rigidez G = "+ A2 + " in²"+
+				"\nÁrea da deformação = "+ AD2 + " in"+
+				"\nDeformação média: "+ DM2 + " in"+
+				"\nPosição longitudinal do centróide - x (área do dano) = "+ PLx2 + " in"+
+				"\nPosição longitudinal do centróide - y (área do dano) = "+ ZT2 + " in"+
+				"\nPosição longitudinal do centróide - x (eixos veículo) = "+ PLxv2 + " in"+
+				"\nPosição longitudinal do centróide - y (eixos veículo) = "+ PLyv2 + " in"+
+				"\nEnergia de deformação E = "+ E2 + " j"+
+				"\nBraço de alavanca = "+ BA2 + " in"+
+				"\nRaio de giro = "+ RG2 + " in"+
+				"\nRelação efetiva de massa = "+ RM2 +
+				"\nDelta V = "+ DV2 + " km/h"+
+				"\nForça de deformação = "+ FZ2 + " N";
+
+
+      }
+            
+    </script>
+
+</head>
+<body>
+            <center style="font-family: Times New Roman, Times, serif;font-weight: bold;"><h1>VEÍCULO 1</h1></center><center style="font-family: Times New Roman, Times, serif;"><h4 style="font-weight: bold;">
+
+    			<label for="de1">Distância entre eixos em metros =&nbsp</label>
+	    <input type="Number" id="de1Id"  name="de1" min="-1000" max="100000" style="font-size: 20px"/>
+
+            		<br><br><label for="cv1">Comprimento do veículo em metros =&nbsp</label>
+	    <input type="Number" id="cv1Id"  name="cv1" min="-1000" max="100000" style="font-size: 20px"/>
+		
+	                <br><br><label for="lv1">Largura do veículo em metros =&nbsp</label>
+	    <input type="Number" id="lv1Id"  name="lv1" min="-1000" max="100000" style="font-size: 20px"/>
+	    
+	                <br><br><label for="mv1">Massa do veículo em quilos =&nbsp</label>
+	    <input type="Number" id="mv1Id"  name="mv1" min="-1000" max="100000" style="font-size: 20px"/>
+
+	                <br><br><label for="dcf1">Distância do centro de gravidade para a frente do veículo em metros =&nbsp</label>
+	    <input type="Number" id="dcf1Id"  name="dcf1" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="dcl1">Distância do centro de gravidade para a lateral do veículo em metros =&nbsp</label>
+	    <input type="Number" id="dcl1Id"  name="dcl1" min="-1000" max="100000" style="font-size: 20px"/>
+
+            		<br><br><label for="dc1">Distância de C1 para a extremidade do veículo em centímetros =&nbsp</label>
+	    <input type="Number" id="dc1Id"  name="dc1" min="-1000" max="100000" style="font-size: 20px"/>
+
+            <br><br><label for="d11">Deformação 1 em centímetros =&nbsp</label>
+	    <input type="Number" id="d11Id"  name="d11" min="-1000" max="100000" style="font-size: 20px"/>
+		<br><br>
+	                <label for="d21">Deformação 2 em centímetros =&nbsp</label>
+	    <input type="Number" id="d21Id"  name="d21" min="-1000" max="100000" style="font-size: 20px"/>
+	    
+	                <br><br><label for="d31">Deformação 3 em centímetros =&nbsp</label>
+	    <input type="Number" id="d31Id"  name="d31" min="-1000" max="100000" style="font-size: 20px"/>
+
+	                <br><br><label for="d41">Deformação 4 em centímetros =&nbsp</label>
+	    <input type="Number" id="d41Id"  name="d41" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="d51">Deformação 5 em centímetros =&nbsp</label>
+	    <input type="Number" id="d51Id"  name="d51" min="-1000" max="100000" style="font-size: 20px"/>
+
+	                <br><br><label for="d61">Deformação 6 em centímetros =&nbsp</label>
+	    <input type="Number" id="d61Id"  name="d61" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="lt1">Largura total de deformação em centímetros =&nbsp</label>
+	    <input type="Number" id="lt1Id"  name="lt1" min="-1000" max="100000" style="font-size: 20px"/>
+
+	                <br><br><label for="CFA">Coeficiente de rigidez A =&nbsp</label>
+	    <input type="Number" id="CFAId"  name="CFA" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="CFB">Coeficiente de rigidez B =&nbsp</label>
+	    <input type="Number" id="CFBId"  name="CFB" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="pd1">PDOF em graus =&nbsp</label>
+	    <input type="Number" id="pd1Id"  name="pd1" min="-1000" max="100000" style="font-size: 20px"/>
+
+ 			</h4><br>
+<center style="font-family: Times New Roman, Times, serif;font-weight: bold;"><h1>VEÍCULO 2</h1></center><center style="font-family: Times New Roman, Times, serif;"><h4 style="font-weight: bold;">
+
+            		
+
+            		<label for="de2">Distância entre eixos em metros =&nbsp</label>
+	    <input type="Number" id="de2Id"  name="de2" min="-1000" max="100000" style="font-size: 20px"/>
+
+            		<br><br><label for="cv2">Comprimento do veículo em metros =&nbsp</label>
+	    <input type="Number" id="cv2Id"  name="cv2" min="-1000" max="100000" style="font-size: 20px"/>
+		
+	                <br><br><label for="lv2">Largura do veículo em metros =&nbsp</label>
+	    <input type="Number" id="lv2Id"  name="lv2" min="-1000" max="100000" style="font-size: 20px"/>
+	    
+	                <br><br><label for="mv2">Massa do veículo em quilos =&nbsp</label>
+	    <input type="Number" id="mv2Id"  name="mv2" min="-1000" max="100000" style="font-size: 20px"/>
+
+	                <br><br><label for="dcf2">Distância do centro de gravidade para a frente do veículo em metros =&nbsp</label>
+	    <input type="Number" id="dcf2Id"  name="dcf2" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="dcl2">Distância do centro de gravidade para a lateral do veículo em metros =&nbsp</label>
+	    <input type="Number" id="dcl2Id"  name="dcl2" min="-1000" max="100000" style="font-size: 20px"/>
+
+            		<br><br><label for="dc2">Distância de C1 para a extremidade do veículo em centímetros =&nbsp</label>
+	    <input type="Number" id="dc2Id"  name="dc2" min="-1000" max="100000" style="font-size: 20px"/>
+
+            <br><br><label for="d12">Deformação 1 em centímetros =&nbsp</label>
+	    <input type="Number" id="d12Id"  name="d12" min="-1000" max="100000" style="font-size: 20px"/>
+		<br><br>
+	                <label for="d22">Deformação 2 em centímetros =&nbsp</label>
+	    <input type="Number" id="d22Id"  name="d22" min="-1000" max="100000" style="font-size: 20px"/>
+	    
+	                <br><br><label for="d31">Deformação 3 em centímetros =&nbsp</label>
+	    <input type="Number" id="d32Id"  name="d32" min="-1000" max="100000" style="font-size: 20px"/>
+
+	                <br><br><label for="d42">Deformação 4 em centímetros =&nbsp</label>
+	    <input type="Number" id="d42Id"  name="d42" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="d52">Deformação 5 em centímetros =&nbsp</label>
+	    <input type="Number" id="d52Id"  name="d52" min="-1000" max="100000" style="font-size: 20px"/>
+
+	                <br><br><label for="d62">Deformação 6 em centímetros =&nbsp</label>
+	    <input type="Number" id="d62Id"  name="d62" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="lt2">Largura total de deformação em centímetros =&nbsp</label>
+	    <input type="Number" id="lt2Id"  name="lt2" min="-1000" max="100000" style="font-size: 20px"/>
+
+	                <br><br><label for="CFA2">Coeficiente de rigidez A =&nbsp</label>
+	    <input type="Number" id="CFA2Id"  name="CFA2" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="CFB2">Coeficiente de rigidez B =&nbsp</label>
+	    <input type="Number" id="CFB2Id"  name="CFB2" min="-1000" max="100000" style="font-size: 20px"/>
+
+	    		<br><br><label for="pd2">PDOF em graus =&nbsp</label>
+	    <input type="Number" id="pd2Id"  name="pd2" min="-1000" max="100000" style="font-size: 20px"/>
+            		<br><br>
+	    <div class="noPrint">
+<br>
+	<p class="submit">
+            <input type="submit" onclick="Projecao()" value="Calcular" size="6" style="font-size: 22px;border-radius: 50%;box-shadow: 0 2px #999;outline: 0;font-weight: bold;"/>
+
+        </p> 
+		<form action="" method="get" class="priceOptionForm" name="priceOptionForm">
+		</form>
+	</div>
+	</h4>
+	
+		
+	<div class="noScreen"><br><br></div>
+
+	<p><label style="font-size: 24px;font-weight: bold" for="total">Resultado:</label><br>
+
+	<div class="noScreen"><br></div>
+		<textarea readonly="readonly" id="totalId" name="total" cols="54" rows="31" style="font-size: 16px;font-weight: bold;"></textarea>
+            
+        </p>
+
+<div class="noScreen"><br></div>
+
+<p class="a"><b>REFERÊNCIA:</b> DAILY, John; SHIGEMURA, Nathan; DAILY, Jeremy. <b>Fundamentals of traffic crash reconstruction.</b> Vol 2, 6ª ed. Jacksonville, Flórida-EUA: UNF, 2014.(pg 609)</p>
+
+<div class="noPrint">
+<form>
+  <a class="btn btn-primary " href="#" onClick="window.print(); return false;"><span  class="fas fa-print"></span> Gerar Impressão Direta</a>
+  <a class="btn btn-primary " href="javascript:genPDF()"><span  class="fas fa-file-pdf"></span> Download PDF</a>
+</form>
+</div>
+
+<script async src="https://drv.tw/inc/wd.js"></script></body>
+</main>
+
+</div>
+
+<footer class="app-footer">
+    <span><strong style="font-size: 14px;font-weight: bold;">Sistema Integrado de Perícia</strong></span>
+    <span title="Descrição:  Retira automatismo para busca no Infoconv 
+            Hash: a1fbbe4 
+            Autor:  Thyago " class="ml-auto">
+            <small class="text-muted" style="font-size: 11px;">
+                Versão: - Data: 01/01/2020 00:00
+            </small>
+    </span>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<!-- CoreUI main scripts -->
+
+<script src="pagina.js"></script>
+
+<script src="drop.js"></script>
+
+<script src="file - COLISÃO EXCÊNTRICA.js"></script>
+
+<script src="font.js"></script>
+
+
+<!-- Plugins and scripts required by this views -->
+
+</body>
+</html>

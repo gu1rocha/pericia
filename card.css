@@ -1,0 +1,158 @@
+
+/* Primefaces */
+.ui-datatable table {
+    table-layout: auto;
+    margin-bottom: 0;
+    font-size: .875rem;
+}
+.ui-datatable thead th{
+    vertical-align:middle;
+    font-weight:bold; font-size:90%;
+    background:#eaeaea;
+    padding:.5rem;
+    border-radius: 0;
+    text-align: left;
+    box-shadow: none;
+}
+
+.ui-datatable.itens-danos thead th{                
+    text-align: center;
+}
+
+.ui-datatable .ui-widget-content a.btn-info,
+.ui-datatable .ui-widget-content a.btn-inverse,
+.ui-datatable .ui-widget-content a.btn-success,            
+.ui-datatable .ui-widget-content a.btn-warning,
+.ui-datatable .ui-widget-content a.btn-primary,
+.ui-datatable .ui-widget-content a.btn-danger,
+.ui-datatable .ui-widget-content a.btn-danger-outline:hover{
+    color: #fff;
+    font-size: inherit;
+}
+.ui-datatable .ui-widget-content a.btn-danger-outline{
+    color: #d9534f;
+    font-size: inherit;
+}                         
+.ui-datatable .ui-widget-content a.btn-secondary{
+    font-size: inherit;
+}
+.ui-datatable .ui-widget-content a.btn-info.btn-xs,
+.ui-datatable .ui-widget-content a.btn-secondary.btn-xs,
+.ui-datatable .ui-widget-content a.btn-inverse.btn-xs,
+.ui-datatable .ui-widget-content a.btn-success.btn-xs,
+.ui-datatable .ui-widget-content a.btn-warning.btn-xs,
+.ui-datatable .ui-widget-content a.btn-primary.btn-xs,
+.ui-datatable .ui-widget-content a.btn-danger.btn-xs{
+    font-size: 0.8rem;
+}
+.ui-datatable .ui-column-filter {
+    width: 100%;
+}   
+
+
+
+.ui-paginator-first.ui-state-default.ui-corner-all:before{
+    content: "\f049";
+    font-family: FontAwesome;
+    font-size: .875rem;
+
+}            
+.ui-icon.ui-icon-seek-first{
+    display: none;
+}
+
+.ui-paginator-prev.ui-state-default.ui-corner-all:before{
+    content: "\f04a";
+    font-family: FontAwesome;
+
+}            
+.ui-icon.ui-icon-seek-prev{
+    display: none;
+}
+
+.ui-paginator-next.ui-state-default.ui-corner-all:before{
+    content: "\f04e";
+    font-family: FontAwesome;
+
+}            
+.ui-icon.ui-icon-seek-next{
+    display: none;
+}
+.ui-paginator-last.ui-state-default.ui-corner-all:before{
+    content: "\f050";
+    font-family: FontAwesome;
+
+}            
+.ui-icon.ui-icon-seek-end{
+    display: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0){
+    input[type=date].form-control, input[type=time].form-control, input[type=datetime-local].form-control, input[type=month].form-control {
+        line-height: 1.5 !important;
+    }
+}
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate; }
+.btn-group-justified .btn,
+.btn-group-justified .btn-group {
+    float: none;
+    display: table-cell;
+    width: 1%; 
+}
+.btn-group-justified .btn .btn,
+.btn-group-justified .btn-group .btn {
+    width: 100%; 
+}
+.btn-group-justified .btn .dropdown-menu,
+.btn-group-justified .btn-group .dropdown-menu {
+    left: auto; 
+}
+
+.ui-state-error {
+    border: 1px solid #ccc !important; 
+}
+
+
+/index.html/
+.acesso .list-group-item:first-child {
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.acesso .list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.btns-acoes .btn:not(:last-child){
+    margin-right: .2rem;
+}
+
+.ui-state-active, .btn-danos .ui-state-active{
+    color: #fff;
+    background-color: #0275d8;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow:none;
+}
+.faleconosco-login{
+    border-left: 2px solid #000;
+    border-color: #3c8dbc;
+    padding-left: 4px;
+}
+.status .ui-button-text-only .ui-button-text {
+    padding: .3em .25em;
+}
+
+
+
+
+

@@ -1,0 +1,1414 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Confecção</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="PRF - Sistema Integrado de Perícia">
+    <meta name="author" content="PRF/SIP">
+    <meta name="csrf-token" content="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+    <meta id="_token" value="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+    
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript" src="jspdf.min.js"></script>
+  <script type="text/javascript" src="file.js"></script>
+  <script type="text/javascript" src="1.5.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  
+
+    <!-- Icons -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Main styles for this application -->
+    <link href="https://sicop.prf.gov.br/sicop/build/css/all.css?id=524d9076de909eaa44c0" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+    <style>
+      textarea{
+    width: 100% !important;
+}
+    </style>
+
+</head>
+
+<body class="app header-fixed sidebar-fixed sidebar-lg-show">
+<header class="app-header navbar">
+            <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="https://sicop.prf.gov.br/sicop/prf.png" width="89" height="25" alt="PRF">
+    </a>
+            <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-xl-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+    <a  href="./login.html" class="nome-sistema d-md-down-none" >
+        SIP
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown d-md-down-none">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+               aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bars"></i>
+                <span class="hidden-xs-down" >Sistemas</span>
+                
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a target="_blank" href="https://www170.prf.gov.br/alertabrasil" class="dropdown-item "><i
+                    class="far fa-square"></i> Alerta Brasil</a>
+                                                                <a target="_blank" href="https://www170.prf.gov.br/alertacentral" class="dropdown-item "><i
+                    class="far fa-square"></i> Alerta Brasil 2</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/novobat" class="dropdown-item "><i
+                    class="far fa-square"></i> BAT</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/bop" class="dropdown-item "><i
+                    class="far fa-square"></i> BOP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/pdi" class="dropdown-item "><i
+                    class="far fa-square"></i> PDI</a>
+                                                                <a target="_blank" href="https://sei.prf.gov.br/" class="dropdown-item "><i
+                    class="far fa-square"></i> SEI</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/sicop" class="dropdown-item "><i
+                    class="far fa-square"></i> SICOP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/silver" class="dropdown-item "><i
+                    class="far fa-square"></i> SILVER</a>
+                                                                <a href="#" class="dropdown-item active"><i
+                    class="far fa-check-square"></i> SIP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/multa2" class="dropdown-item "><i
+                    class="far fa-square"></i> SISCOM</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/sisnar" class="dropdown-item "><i
+                    class="far fa-square"></i> SISNAR</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/webmail" class="dropdown-item "><i
+                    class="far fa-square"></i> WebMail</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/wikiprf" class="dropdown-item "><i
+                    class="far fa-square"></i> WikiPRF</a>
+                                                </div>
+        </li>
+        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user"></i>
+                    <span class="d-md-down-none"></span>
+                    
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    
+                    
+                    
+                    <form action="https://sicop.prf.gov.br/sicop/logout" method="post">
+                        <input type="hidden" name="_token" value="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+                        <button type="submit" class="dropdown-item">
+                            <i class="fa fa-power-off"></i> <b>Sair</b>
+                        </button>
+                    </form>
+                </div>
+                    </li>
+    </ul>
+
+</header>
+
+<div class="app-body" id="site">
+ 
+
+    
+  <div class="sidebar" >
+
+    <button class="w3-button w3-block w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='#'">
+      <i class="fa fa-home"> Início</i>
+    </button>
+    <button class="w3-button w3-grey w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='./Confeccao - Administrativo.html'">
+      <i class="fas fa-edit"> Confecção</i>
+    </button>
+    <button class="w3-button w3-block w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='./Atendimento.html'">
+      <i class="fa fa-pen"> Atendimento</i>
+    </button>
+    <button class="w3-button w3-block w3-left-align w3-hover-blue"  style="font-size: 20px;" onclick="location.href='./inicio.html'">
+      <i class="fa fa-calculator"> CALCPRF</i>
+    </button>
+    <button class="w3-button w3-block w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='#'">
+      <i class="fa fa-comments"> Fale conosco</i>
+    </button>
+    <button class="w3-button w3-block w3-left-align w3-hover-blue" style="font-size: 20px;" onclick="location.href='./LPRF.pdf'" target="_blank">
+      <i class="fa fa-file-pdf"> Modelo</i>
+    </button>
+    
+    
+    <button style="margin-bottom: 0em;" class="sidebar-minimizer" type="button"></button>
+          
+                        
+
+                        
+    </div>
+
+    <!-- Main content -->
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <main class="main">
+      <section class="main-content">
+        
+        <div class="row" style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px;">
+          <div data-toggle="tab" href="#Administrativo" class="col active" ><span class="fa fa-life-ring"></span> Administrativo</div>
+          <div data-toggle="tab" href="#InformacoesGerais" class="col" ><span class="fa fa-edit"></span> Informações Gerais</div>
+          <div data-toggle="tab" href="#CaracteristicasRelevantes" class="col" ><samp class="fas fa-pencil-alt"></samp> Vestígios</div>
+          <div data-toggle="tab" href="#DinamicadoEvento" class="col" ><span class="fa fa-map"></span> Dinâmica do Evento</div>
+          <div data-toggle="tab" href="#Conclusao" class="col" ><samp class="fas fa-check-square"></samp> Conclusão</div>
+          <div data-toggle="tab" href="#ResultadosCalculados" class="col" ><span class="fa fa-calculator"></span> Informações e Materiais Complementrares</div>
+          <div data-toggle="tab" href="#AcoesSugeridas" class="col" ><span class="fa fa-paper-plane"></span> Ações Sugeridas</div>
+        </div>
+        <div class="tab-content" >
+          <div id="Administrativo" class="tab-pane fade in active">
+      <div class="card">
+        <div class="card-header">
+                <h4 style="font-weight: bolder;"><span class="fa fa-calendar-plus"></span> 
+                  Histórico
+                </h4>
+        </div>
+        <div class="card-block p-4">
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="col-md-12">
+                  <div class="form-group"><label for="j_idt44:ConsultaProtocolo" class="form-control-label">Protocolo</label><input id="ConsultaProtocolo" type="text" name="j_idt44:ConsultaProtocolo" class="form-control"  />       
+<div class="invalid-feedback">
+</div>
+                  </div>
+              </div> 
+              <div class="col-md-12">
+                <div class="form-group"><label for="j_idt44:ConsultaProcesso" class="form-control-label">Processo</label><input id="ConsultaProcesso" type="text" name="j_idt44:ConsultaProcesso" class="form-control"  />       
+<div class="invalid-feedback">
+</div>
+                </div>
+            </div> 
+                  <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="j_idt44:dataConclusao" class="form-control-label">Data da Conclusão do BAT</label>
+                        <div class="input-group data-hora" id="j_idt44:dataConclusao" tabindex="-1">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text ">
+                                <span class="fa fa-calendar"></span>
+                            </span></div>
+  <span id="j_idt44:dataConclusao:data" class="ui-calendar form-control border-0 p-0"><input id="ConclusaoBAT_data" type="date" name="dia" class="form-control border-inherit"></span>
+<div class="input-group-append">
+<span class="input-group-text border-right-0">
+  <span style="font-size: small;font-weight: bolder;">Obs:</span>
+</span></div>
+  <span id="j_idt44:dataConclusao:obs" class="ui-calendar form-control border-0 p-0"><input id="ConclusaoBAT_obs" type="text" name="Obs" class="form-control border-inherit"></span>
+</div>           
+</div>       
+                        </div>
+                        <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="j_idt44:dataRecebimento" class="form-control-label">Data do Recebimento do BAT</label>
+                        <div class="input-group data-hora" id="j_idt44:dataRecebimento" tabindex="-1">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text border-right-0">
+                                <span class="fa fa-calendar"></span>
+                            </span></div>
+  <span id="j_idt44:dataRecebimento:data" class="ui-calendar form-control border-0 p-0"><input id="Recebimento_data" type="date" name="dia" class="form-control border-inherit"></span>
+
+<div class="input-group-append">
+<span class="input-group-text border-right-0">
+  <span style="font-size: small;font-weight: bolder;">Obs:</span>
+</span></div>
+  <span id="j_idt44:dataRecebimento:hora" class="ui-calendar form-control border-0 p-0"><input id="Recebimento_obs" type="text" name="Obs" class="form-control border-inherit"></span>
+</div>           
+</div>       
+                        
+                    </div>
+                  
+                    <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="j_idt44:dataMaterial" class="form-control-label">Foi Recebido Algum Material?</label>
+                    <div class="input-group data-hora" id="j_idt44:dataMaterial" tabindex="-1">  
+                     <label>
+                        <input type="checkbox" id="escolhaContrato" name="escolhaContrato">
+                        <span class="lever"></span>
+                        Sim
+                    </label>
+                    </div>
+                  </div>
+                    </div>
+
+                    <div class="col-md-12">
+                    <div class="form-group" id="boxContrato" name="boxContrato" style="display:none;">
+                       <label for="j_idt44:dataMaterial" class="form-control-label">Quando e Qual o Material foi Recebido</label>
+                       <div class="input-group data-hora" id="j_idt44:datMaterial" tabindex="-1">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text border-right-0">
+                              <span class="fa fa-calendar"></span>
+                          </span></div>
+  <span id="j_idt44:dataMaterial:data" class="ui-calendar form-control border-0 p-0"><input id="Material_data" type="date" name="dia" class="form-control border-inherit"></span>
+<div class="input-group-append">
+<span class="input-group-text border-right-0">
+    <span class="fa fa-file-alt"></span>
+</span></div>
+  <span id="j_idt44:dataMaterial:hora" class="ui-calendar form-control border-0 p-0"><input id="Material_file" type="file" multiple name="material" class="form-control border-inherit"></span>
+  <div class="form-group"><label>Informações sobre o Material</label><textarea id="Material_texto" name="Antecedente" ></textarea></div>
+</div>           
+</div>       
+                        </div>
+                  
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="j_idt44:dataConfeccao" class="form-control-label">Data do Ínicio da Confecção do Laudo</label>
+                                <div class="input-group data-hora" id="j_idt44:dataConfeccao" tabindex="-1">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text">
+            <span class="fa fa-calendar"></span>
+        </span>
+                                </div>
+          <span id="j_idt44:dataConfeccao:data" class="ui-calendar form-control border-0 p-0"><input id="Confeccao_data" type="date" name="dia" class="form-control border-inherit"></span>
+       
+        
+        <div class="input-group-append">
+        <span class="input-group-text border-right-0">
+          <span style="font-size: small;font-weight: bolder;">Obs:</span>
+        </span></div>
+          <span id="j_idt44:dataConfeccao:hora" class="ui-calendar form-control border-0 p-0"><input id="Confeccao_obs" type="text" name="Obs" class="form-control border-inherit"></span>
+        
+        </div>           
+        </div>       
+                                
+                            </div>
+                            <div class="col-md-12">
+
+                            <div class="form-group">
+                                <label for="j_idt44:dataEnvioRevisao" class="form-control-label">Data do Envio da Revisão</label>
+                                <div class="input-group data-hora" id="j_idt44:dataEnvioRevisao" tabindex="-1">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text">
+            <span class="fa fa-calendar"></span>
+        </span></div>
+          <span id="j_idt44:dataEnvioRevisao:data" class="ui-calendar form-control border-0 p-0"><input id="EnvioRevisao_data" type="date" name="dia" class="form-control border-inherit"></span>
+        <div class="input-group-append">
+        <span class="input-group-text border-right-0">
+          <span style="font-size: small;font-weight: bolder;">Obs:</span>
+        </span></div>
+          <span id="j_idt44:dataEnvioRevisao:hora" class="ui-calendar form-control border-0 p-0"><input id="EnvioRevisao_obs" type="text" name="Obs" class="form-control border-inherit"></span>
+        </div>           
+        </div>                 
+      </div>
+                            <div class="col-md-12">
+                            <div class="form-group"><label for="j_idt44:dataInicioRevisao" class="form-control-label">Data do Ínicio da Revisão</label>
+                                <div class="input-group data-hora" id="j_idt44:dataInicioRevisao" tabindex="-1">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text">
+            <span class="fa fa-calendar"></span>
+        </span></div>
+          <span id="j_idt44:dataInicioRevisao:data" class="ui-calendar form-control border-0 p-0"><input id="InicioRevisao_data" type="date" name="dia" class="form-control border-inherit"></span>
+        
+        <div class="input-group-append">
+        <span class="input-group-text border-right-0">
+          <span style="font-size: small;font-weight: bolder;">Obs:</span>
+        </span></div>
+          <span id="j_idt44:dataInicioRevisao:hora" class="ui-calendar form-control border-0 p-0"><input id="InicioRevisao_obs" type="text" name="Obs" class="form-control border-inherit"></span>
+        </div>           
+        </div>       
+                                </div>
+                            
+
+                            <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="j_idt44:dataFinalRevisao" class="form-control-label">Data do Final da Revisão</label>
+                                  <div class="input-group data-hora" id="j_idt44:dataFinalRevisao" tabindex="-1">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text border-right-0">
+                                          <span class="fa fa-calendar"></span>
+                                      </span></div>
+          <span id="j_idt44:dataFinalRevisao:data" class="ui-calendar form-control border-0 p-0"><input id="FinalRevisao_data" type="date" name="dia" class="form-control border-inherit"></span>
+        <div class="input-group-append">
+        <span class="input-group-text border-right-0">
+          <span style="font-size: small;font-weight: bolder;">Obs:</span>
+        </span></div>
+          <span id="j_idt44:dataFinalRevisao:hora" class="ui-calendar form-control border-0 p-0"><input id="FinalRevisao_obs" type="text" name="Obs" class="form-control border-inherit"></span>        
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                            <div class="form-group"><label for="j_idt44:dataMaterial" class="form-control-label">Houve Demanda Extraordinária?</label>
+                                <div class="input-group data-hora" id="j_idt44:dataMaterial" tabindex="-1">  
+                                 <label>
+                                    <input type="checkbox" id="escolhaContrato1" name="escolhaContrato1">
+                                    <span class="lever"></span>
+                                    Sim
+                                </label>
+                                </div></div></div>
+                                <div class="col-md-12">
+                                <div class="form-group" id="boxContrato1" name="boxContrato1" style="display:none;">
+                                    <label for="j_idt44:dataMaterial" class="form-control-label">Data Inicial e Final da Demanda Extraordinária</label>
+                                    <div class="input-group data-hora" id="j_idt44:dataMaterial" tabindex="-1">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                <span class="fa fa-calendar"></span>
+            </span></div>
+              <span id="j_idt44:dataMaterial:data" class="ui-calendar form-control border-0 p-0"><input id="InicioDemanda_data" type="date" name="dia" class="form-control border-inherit"></span>
+            
+
+            
+            <div class="input-group-append">
+            <span class="input-group-text border-right-0">
+                <span class="fa fa-calendar"></span>
+            </span></div>
+              <span id="j_idt44:dataMaterial:hora" class="ui-calendar form-control border-0 p-0"><input id="FinalDemanda_data" type="date" name="date" class="form-control border-inherit"></span>
+            
+            </div>           
+            </div>       
+                                    </div>
+                                    
+                                        
+                                        <div class="col-md-12">
+                                        <div class="form-group"><label for="j_idt44:dataConclusaoLaudo" class="form-control-label">Data e Hora da Conclusão do Laudo</label>
+                                          <div class="input-group data-hora" id="j_idt44:dataConclusaoLaudo" tabindex="-1">
+                                          <div class="input-group-prepend">
+                                          <span class="input-group-text">
+                      <span class="fa fa-calendar"></span>
+                  </span>
+                                          </div>
+                    <span id="j_idt44:dataConclusaoLaudo:data" class="ui-calendar form-control border-0 p-0"><input id="ConclusaoLaudo_data" type="date" name="dia" class="form-control border-inherit"></span>
+                  
+                  <div class="input-group-append">
+                  <span class="input-group-text border-right-0">
+                      <span class="fa fa-clock-o"></span>
+                  </span></div>
+                    <span id="j_idt44:dataConclusaoLaudo:hora" class="ui-calendar form-control border-0 p-0"><input id="ConclusaoLaudo_hora" type="time" name="hora" class="form-control border-inherit"></span>
+
+                  </div>           
+                  </div>       
+                                          </div>
+                                          <div class="col-md-12">
+                                            <div class="form-group"><label for="j_idt44:dataPRF-Particao" class="form-control-label">PRF Responsável e Partição</label>
+                                              <div class="input-group data-hora" id="j_idt44:dataPRF-Particao" tabindex="-1">
+                                              <div class="input-group-prepend">
+                                              <span class="input-group-text">
+                          <span class="fa fa-user"></span>
+                      </span>
+                                              </div>
+                        <span id="j_idt44:dataPRF" class="ui-calendar form-control border-0 p-0"><input id="PRFParticao1" type="text" name="PRF" class="form-control border-inherit"></span>
+                      
+                      <div class="input-group-append">
+                      <span class="input-group-text border-right-0">
+                          <span class="fa fa-users"></span>
+                      </span></div>
+                        <span id="j_idt44:dataPartição" class="ui-calendar form-control border-0 p-0"><select id="Particao1" size="1" name="Partição" class="form-control border-inherit">
+                          <option value= "Levantamento" >Levantamento</option>
+                          <option value= "Levantamento Complementar" >Levantamento Complementar</option>
+                          <option value= "Confecção do Laudo" >Confecção do Laudo</option>
+                          <option value= "Cálculos Físicos" >Cálculos Físicos</option>
+                          <option value= "Confecção de Reconstrução Digital 3D" >Confecção de Reconstrução Digital 3D</option>
+                          <option value= "Confecção de Croqui" >Confecção de Croqui</option>
+                          <option value= "Confecção Pericial Completa" >Confecção Pericial Completa</option>
+                        </select></span>
+    
+                      </div>           
+                      </div>       
+                                              
+
+                                              <div class="col-md-12" id="wrapper">
+                                                <div class="form-group">
+
+                                                <div id="form_div">
+                                                  <table id="PRF_Responsavel_table" >
+                                                   <tr id="row2">
+                                                   </tr>
+                                                  </table>
+                                                  
+                                                  <input type="button" onclick="PRF_Responsavel();"  value="Incluir PRF Responsável">
+                                                
+                                                </div>
+                                              </div>
+                                              </div> 
+                                          </div>
+                                      
+   
+
+                  
+
+                  <div class="col-md-12">
+                      <div class="form-group mb-0"><a id="j_idt44:j_idt183" href="#" onclick="mojarra.ab(this,event,'action','@form','@form j_idt44:mensagemGlobal');return false" class="btn btn-primary mr-1">
+                                  <span class="fa fa-save"></span> Salvar
+                                  </a><a href="https://novobat.prf.gov.br/novobat/protegido/boletim/inicio" class="btn btn-secondary">
+                                  <span class="fa fa-remove"></span> Voltar
+                              </a>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+        </div>
+          </div>
+          <div id="InformacoesGerais" class="tab-pane fade">
+            <div class="card">
+            <div class="card-header">
+                    <h4 style="font-weight: bolder;"><span class="fa fa-project-diagram"></span> 
+                        Introdução
+                    </h4>
+            </div>
+            <div class="card-block p-4">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    
+                  <div class="col-md-12"> 
+                    <div class="form-group">
+                        <label for="j_idt44:dataAcidente" class="form-control-label">Data e Hora do Acidente</label>
+<div class="input-group data-hora" id="j_idt44:dataAcidente" tabindex="-1">
+<div class="input-group-prepend">
+<span class="input-group-text ">
+    <span class="fa fa-calendar"></span>
+</span></div>
+  <span id="j_idt44:dataAcidente:data" class="ui-calendar form-control border-0 p-0"><input id="dataAcidentedata" type="date" name="dia" class="form-control border-inherit"></span>
+<div class="input-group-append">
+<span class="input-group-text border-right-0">
+    <span class="fa fa-clock-o"></span>
+</span></div>
+  <span id="j_idt44:dataAcidente:hora" class="ui-calendar form-control border-0 p-0"><input id="dataAcidentehora" type="time" name="hora" class="form-control border-inherit"></span>
+</div>           
+</div>          
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                      <label for="j_idt44:dataFinalRevisao" class="form-control-label">Horários de Acionamento e Saída da Equipe para o Local</label>
+                        <div class="input-group data-hora" id="j_idt44:dataFinalRevisao" tabindex="-1">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text border-right-0">
+                                <span class="fa fa-clock-o"></span>
+                            </span></div>
+<span id="j_idt44:dataFinalRevisao:data" class="ui-calendar form-control border-0 p-0"><input id="Acionamente_Equipe" type="time" name="dia" class="form-control border-inherit"></span>
+<div class="input-group-append">
+<span class="input-group-text border-right-0">
+  <span class="fa fa-clock-o"></span>
+</span></div>
+<span id="j_idt44:dataFinalRevisao:hora" class="ui-calendar form-control border-0 p-0"><input id="Saida_ao_Local" type="time" name="hora" class="form-control border-inherit"></span>        
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="j_idt44:dataFinalRevisao" class="form-control-label">Horários de Chegada e Saída da Equipe do Local</label>
+                          <div class="input-group data-hora" id="j_idt44:dataFinalRevisao" tabindex="-1">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text border-right-0">
+                                  <span class="fa fa-clock-o"></span>
+                              </span></div>
+  <span id="j_idt44:dataFinalRevisao:data" class="ui-calendar form-control border-0 p-0"><input id="Chegada_Equipe" type="time" name="dia" class="form-control border-inherit"></span>
+  <div class="input-group-append">
+  <span class="input-group-text border-right-0">
+    <span class="fa fa-clock-o"></span>
+  </span></div>
+  <span id="j_idt44:dataFinalRevisao:hora" class="ui-calendar form-control border-0 p-0"><input id="Saida_do_Local" type="time" name="hora" class="form-control border-inherit"></span>        
+                          </div>
+                        </div>
+                    </div>
+                <div class="col-md-12"><div class="form-group">
+                  <label for="j_idt44:localizacao:rodovia" class="form-control-label">Local do Acidente</label>
+<div class="input-group data-hora" id="j_idt44:localizacao:rodovia" tabindex="-1">
+<div class="input-group-prepend">
+<span class="input-group-text ">
+<span style="font-size: small;font-weight: bolder;">Município</span>
+</span></div>
+<span id="j_idt44:localizacao:menuMunicipio" class="ui-calendar form-control border-0 p-0"><input id="Municipio" type="text" name="Municipio"  class="form-control border-inherit"></span>
+<div class="input-group-append">
+<span class="input-group-text border-right-0">
+<span style="font-size: small;font-weight: bolder;">BR</span>
+</span></div>
+<span id="j_idt44:localizacao:menuRodovia" class="ui-calendar form-control border-0 p-0"><input id="Rodovia" type="text" name="Rodovia"  class="form-control border-inherit"></span>
+<div class="input-group-append">
+  <span class="input-group-text border-right-0">
+  <span style="font-size: small;font-weight: bolder;">KM</span>
+  </span></div>
+  <span id="j_idt44:localizacao:menuKm" class="ui-calendar form-control border-0 p-0"><input id="Km" type="number" name="Km"  min="0" step="0.1" class="form-control border-inherit"></span>
+  </div>           
+</div>  
+                </div> 
+          <div class="col-md-12"> 
+         
+            <div class="form-group"><label for="j_idt44:TipodoAcidente" class="form-control-label">Tipo de acidente</label><span id="j_idt44:dataTipodoAcidente" class="ui-calendar form-control border-0 p-0"><select id="TipodoAcidente1" size="1" name="TipodoAcidente" class="form-control border-inherit">
+              <option value= "Atropelamento de Animal" >Atropelamento de Animal</option>
+              <option value= "Atropelamento de Pedestre" >Atropelamento de Pedestre</option>
+              <option value= "Capotamento" >Capotamento</option>
+              <option value= "Colisão com Objeto em Movimento" >Colisão com Objeto em Movimento</option>
+              <option value= "Colisão com Objeto Estático" >Colisão com Objeto Estático</option>
+              <option value= "Colisão Frontal" >Colisão Frontal</option>
+              <option value= "Colisão Lateral" >Colisão Lateral</option>
+              <option value= "Colisão Transversal" >Colisão Transversal</option>
+              <option value= "Colisão Traseira" >Colisão Traseira</option>
+              <option value= "Danos Eventuais" >Danos Eventuais</option>
+              <option value= "Derramamento de Carga" >Derramamento de Carga</option>
+              <option value= "Engavetamento" >Engavetamento</option>
+              <option value= "Incêndio" >Incêndio</option>
+              <option value= "Queda de Ocupante de Veículo" >Queda de Ocupante de Veículo</option>
+              <option value= "Saída de Leito Carroçável" >Saída de Leito Carroçável</option>
+              <option value= "Tombamento" >Tombamento</option>
+            </select></span>
+                         
+<div class="invalid-feedback">
+</div>
+            </div>
+            <div class="col-md-12" id="wrapper">
+              <div class="form-group">
+        
+              <div id="form_div">
+                <table id="Tipo_acidente_table" >
+                 <tr id="row7">
+                 </tr>
+                </table>
+                
+                <input type="button" onclick="Tipo_acidente();" value="Incluir Evento Sucessivo">
+              
+              </div>
+            </div>
+            </div> 
+        </div> 
+
+  <div class="col-md-12">
+    <div class="form-group">
+        <label for="j_idt44:localizacao:rodovia" class="form-control-label">Veículo(s)</label><br>
+        <label for="j_idt44:localizacao:rodovia" class="form-control-label">V1</label>
+    <div class="input-group data-hora" id="j_idt44:localizacao:rodovia" tabindex="-1">
+      <div class="input-group-prepend">
+        <span class="input-group-text ">
+          <span style="font-size: small;font-weight: bolder;">Placa</span>
+        </span>
+      </div>
+        <span id="j_idt44:localizacao:menuPlaca" class="ui-calendar form-control border-0 p-0"><input id="Placa1" type="text" name="Placa"  class="form-control border-inherit"></span>
+      <div class="input-group-append">
+        <span class="input-group-text border-right-0">
+          <span style="font-size: small;font-weight: bolder;">Marca</span>
+        </span>
+      </div>
+        <span id="j_idt44:localizacao:menuMarca" class="ui-calendar form-control border-0 p-0"><input id="Marca1" type="text" name="Marca"  class="form-control border-inherit"></span>
+      <div class="input-group-append">
+        <span class="input-group-text border-right-0">
+          <span style="font-size: small;font-weight: bolder;">Modelo</span>
+        </span>
+      </div>
+        <span id="j_idt44:localizacao:menuModelo" class="ui-calendar form-control border-0 p-0"><input id="Modelo1" type="text" name="Modelo"  class="form-control border-inherit"></span>
+    </div></div>
+    <div class="col-md-12" id="wrapper">
+      <div class="form-group">
+
+      <div id="form_div">
+        <table id="Incluir_Veiculo_table" >
+         <tr id="row3">
+         </tr>
+        </table>
+        
+        <input type="button" onclick="Incluir_Veiculo();" value="Incluir Veículo">
+      
+      </div>
+    </div>
+    </div>            
+     
+  </div>
+
+  <div class="col-md-12"><h4 style="font:bolder;">Pessoa</h4>
+                  <div class="form-group"><label for="j_idt44:Pessoa:Nome" class="form-control-label">Nome</label><input id="Nome1" type="text" name="j_idt44:Pessoa:Nome" class="form-control"  />       
+<div class="invalid-feedback">
+</div>
+                  </div>
+              </div> 
+              <div class="col-md-12">
+                <div class="form-group"><div class="input-group data-hora" id="j_idt44:Pessoa:CPF" tabindex="-1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text ">
+                      <span style="font-size: small;font-weight: bolder;">CPF</span>
+                    </span>
+                  </div>
+                    <span id="j_idt44:Pessoa:CPF" class="ui-calendar form-control border-0 p-0"><input id="CPF1" type="text" name="CPF" placeholder="CPF" class="form-control border-inherit"></span>
+                  <div class="input-group-append">
+                    <span class="input-group-text border-right-0">
+                      <span style="font-size: small;font-weight: bolder;">Ano</span>
+                    </span>
+                  </div>
+                    <span id="j_idt44:Pessoa:Nascimeto" class="ui-calendar form-control border-0 p-0"><input id="Nascimeto1" type="text" name="Nascimeto" placeholder="Ano de Nascimeto" class="form-control border-inherit"></span>
+                  <div class="input-group-append">
+                    <span class="input-group-text border-right-0">
+                      <span style="font-size: small;font-weight: bolder;">Status</span>
+                    </span>
+                  </div>
+                    <samp id="j_idt44:Pessoa:Status" class="ui-calendar form-control border-0 p-0"><select id="Status1" size="1" name="Status"  class="form-control border-inherit">
+                      <option value="Ileso">Ileso</option>
+                      <option value="Ferido Leve">Ferido Leve</option>
+                      <option value="Ferido Grave">Ferido Grave</option>
+                      <option value="Morto">Morto</option>
+                    </select></span>
+                </div> <div class="form-group"><label for="j_idt44:Envolvimento" class="form-control-label">Tipo de envolvimento</label><span id="j_idt44:dataEnvolvimento" class="ui-calendar form-control border-0 p-0"><select id="Envolvimento" size="1" name="Envolvimento" class="form-control border-inherit">
+                      <option value= "não Informado" >Não Informado</option>
+                      <option value= "cavaleiro" >Cavaleiro</option>
+                      <option value= "condutor" >Condutor</option>
+                      <option value= "passageiro" >Passageiro</option>
+                      <option value= "pedestre" >Pedestre</option>
+                      <option value= "testemunha" >Testemunha</option>
+                </select></span> 
+              </div>
+
+                    <div class="form-group" id="condutor_passageiro" name="condutor_passageiro" style="display:none;">
+                      <div class="form-group">
+                        <label for="j_idt44:Causas" class="form-control-label">De V<input type="number" min="1" max="99" id="condutor_passageiro_texto" name="condutor_passageiro_texto"></label>       
+                        <div class="invalid-feedback">
+                        </div>           
+                 </div>     
+                </div>
+              
+        </div>
+        <div class="col-md-12" id="wrapper">
+          <div class="form-group">
+    
+          <div id="form_div">
+            <table id="Incluir_Pessoa_table" >
+             <tr id="row5">
+             </tr>
+            </table>
+            
+            <input type="button" onclick="Incluir_Pessoa();" value="Incluir Pessoa">
+          
+          </div>
+        </div>
+        </div> 
+              </div>
+              <div class="col-md-12"><div class="form-group">
+                <label for="j_idt44:localizacao:rodovia" class="form-control-label">Apoio Externo</label>         
+ 
+<div class="col-md-12" id="wrapper">
+  <div class="form-group">
+
+  <div id="form_div">
+    <table id="Apoio_Externo_table" >
+     <tr id="row6">
+     </tr>
+    </table>
+    
+    <input type="button" onclick="Apoio_Externo();" value="Incluir Órgão">
+  
+  </div>
+</div>
+</div> 
+              </div> </div> 
+                      
+    
+                      
+    
+                      <div class="col-md-12">
+                          <div class="form-group mb-0"><a id="j_idt44:j_idt183" href="#" onclick="mojarra.ab(this,event,'action','@form','@form j_idt44:mensagemGlobal');return false" class="btn btn-primary mr-1">
+                                      <span class="fa fa-save"></span> Salvar
+                                      </a><a href="https://novobat.prf.gov.br/novobat/protegido/boletim/inicio" class="btn btn-secondary">
+                                      <span class="fa fa-remove"></span> Voltar
+                                  </a>
+                          </div>
+    
+                      </div>
+                  </div>
+              </div>
+          </div>
+            </div>
+          </div>
+          <div id="CaracteristicasRelevantes" class="tab-pane fade">
+            <div class="card">
+              <div class="card-header">
+                      <h4 style="font-weight: bolder;"><span class="fa fa-fingerprint"></span> 
+                          Vestígios e Características Relevantes
+                      </h4>
+              </div>
+              <div class="card-block p-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="col-md-12"> 
+                            <div class="form-group">
+                                  
+      <div class="input-group data-hora" id="j_idt44:dataVestigios" tabindex="-1">
+        <div class="col-md-12" >
+          <div class="col-6 col-md-4"><input id='Vestígios_Humano1' type="radio" name="Vestigios1" value="Humano"><label> Humano</label></div>
+          <div class="col-6 col-md-4"><input id="Vestígios_Veicular1" type="radio" name="Vestigios1" value="Veicular"><label> Veicular</label></div>
+          <div class="col-6 col-md-4"><input id="Vestígios_Viário_Ambiental1" type="radio" name="Vestigios1" value="Viário-Ambiental"><label> Viário-Ambiental</label></div>  
+          </div>
+                 
+       
+      <div class="form-group"><textarea id="Vestígios_texto1" name="Vestígios_texto1" >
+      </textarea>       
+        <div class="invalid-feedback">
+        </div>                
+      <div class="input-group data-hora" id="j_idt44:dataVestigios" tabindex="-1">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+              <span class="fa fa-file-alt"></span>
+          </span></div>
+            <span id="multiple_upload" class="ui-calendar form-control border-0 p-0"><input type="file" id="uploadChange" multiple name="files[]" class="form-control border-inherit"></span>
+      </div>
+      <output id="lista"></output></div>
+      <div class="col-md-12" id="wrapper">
+        <div id="form_div">
+          <table id="Vestigio_table" >
+            <tr id="row4">
+            </tr>
+           </table>
+        <input type="button" onclick="Vestigio();" value="Incluir Outro Vestígio">
+        </div>
+      </div>                          
+      </div>      
+                                                </div>
+                                            </div>
+                        <div class="col-md-12">
+                            <div class="form-group mb-0"><a id="j_idt44:j_idt183" href="#" onclick="mojarra.ab(this,event,'action','@form','@form j_idt44:mensagemGlobal');return false" class="btn btn-primary mr-1">
+                                        <span class="fa fa-save"></span> Salvar
+                                        </a><a href="https://novobat.prf.gov.br/novobat/protegido/boletim/inicio" class="btn btn-secondary">
+                                        <span class="fa fa-remove"></span> Voltar
+                                    </a>
+                            </div>
+      
+                        </div>
+                    </div>
+                </div>
+            </div>
+              </div>
+          </div>
+          <div id="DinamicadoEvento" class="tab-pane fade">
+
+<div class="card">
+        <div class="card-header">
+                <h4><span class="far fa-object-group"></span> 
+                    Croqui e Reconstrução Digital
+                </h4>
+        </div>
+        <div class="card-block p-4">
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="col-md-12">
+                  <div class="form-group"><label>Fase Antecedente</label></span><textarea id="Antecedente" name="Antecedente" ></textarea>
+                  <span id="multiple_upload2" class="ui-calendar form-control border-0 p-0"><input type="file" id="CroquiAntecedente"  name="files" class="form-control border-inherit"></span>
+                  </div>
+                  <output id="CroquiAntecedente_imagem"></output>
+              </div> 
+              <div class="col-md-12">
+                <div class="form-group"><label>Fase Culminante</label><textarea id="Culminante" name="Culminante" >
+                </textarea><span id="multiple_upload3" class="ui-calendar form-control border-0 p-0"><input type="file" id="CroquiCulminante"  name="files" class="form-control border-inherit"></span>
+                </div>
+                <output id="CroquiCulminante_imagem"></output>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group"><label>Fases Intermediárias</label><textarea id="Intermediario" name="Intermediario" >
+              </textarea><span id="multiple_upload" class="ui-calendar form-control border-0 p-0"><input type="file" id="CroquiIntermediario" name="files" class="form-control border-inherit"></span>
+              </div>
+              <output id="CroquiIntermediario_imagem"></output>
+         
+          <div class="col-md-12" id="wrapper">
+            <div class="form-group">
+      
+            <div id="form_div">
+              <table id="Intermediaria_table" >
+               <tr id="Intermediario">
+               </tr>
+              </table>
+              
+              <input type="button" onclick="Intermediaria();" value="Incluir Outra Fase Intermediária">
+            
+            </div>
+          </div>
+          </div></div>
+            <div class="col-md-12">
+              <div class="form-group"><label>Fase Final</label><textarea id="Final" name="Final" >
+              </textarea><span id="multiple_upload1" class="ui-calendar form-control border-0 p-0"><input type="file" id="CroquiFinal" name="files" class="form-control border-inherit"></span>
+              </div>
+              <output id="CroquiFinal_imagem"></output>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group"><label>Reconstrução Digital</label><textarea id="Digital" name="Digital" >
+            </textarea><span class="ui-calendar form-control border-0 p-0"><input type="file" id="ReconstrucaoDigital"  name="files" class="form-control border-inherit"></span></div>
+            <div class="form-group"><label for="j_idt44:ReconstrucaoDigitalLink" class="form-control-label">Inserir Link</label><input id="ReconstrucaoDigitalLink" type="url" name="j_idt44:ConsultaProtocolo" class="form-control"  />       
+              <div class="invalid-feedback">
+              </div>
+                                </div>
+            <output id="ReconstrucaoDigital_imagem"></output>
+        </div>
+                     
+
+                  
+
+                  <div class="col-md-12">
+                      <div class="form-group mb-0"><a id="j_idt44:j_idt183" href="#" onclick="mojarra.ab(this,event,'action','@form','@form j_idt44:mensagemGlobal');return false" class="btn btn-primary mr-1">
+                                  <span class="fa fa-save"></span> Salvar
+                                  </a><a href="https://novobat.prf.gov.br/novobat/protegido/boletim/inicio" class="btn btn-secondary">
+                                  <span class="fa fa-remove"></span> Voltar
+                              </a>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+        </div>
+          </div>
+          
+          <div id="ResultadosCalculados" class="tab-pane fade">
+
+<div class="card">
+        <div class="card-header">
+                <h4><span class="fas fa-calculator"></span> 
+                    CALCPRF
+                </h4>
+        </div>
+        <div class="card-block p-4">
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="col-md-12"> 
+                    <div class="form-group">
+                      <div class="input-group data-hora" id="j_idt44:dataVestigios" tabindex="-1">
+                    <div class="form-group"><textarea id="CALCPRF" name="CALCPRF" >
+                </textarea>       
+                  <div class="invalid-feedback">
+                  </div>                
+                <div class="input-group data-hora" id="j_idt44:dataVestigios" tabindex="-1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <span class="fa fa-file-alt"></span>
+                    </span></div>
+                      <span id="multiple_upload" class="ui-calendar form-control border-0 p-0"><input type="file" id="Informações_Materiais_Complementrares" multiple name="files[]" class="form-control border-inherit"></span>
+                </div>
+                        </div>
+                        
+      
+      
+                        <div class="col-md-12" id="wrapper">
+        
+                          <div id="form_div">
+                  
+                            
+                            <table id="employee4_table" >
+                              <tr id="row4">
+                              </tr>
+                             </table>
+                  
+                            
+                            
+                          <input type="button" onclick="add_rown();" value="Incluir Outro Resultado Calculado">
+                            
+                          
+                          
+                          </div>
+                          
+                          
+                        </div>   </div></div></div>
+                     
+
+                  
+
+                  <div class="col-md-12">
+                      <div class="form-group mb-0"><a id="j_idt44:j_idt183" href="#" onclick="mojarra.ab(this,event,'action','@form','@form j_idt44:mensagemGlobal');return false" class="btn btn-primary mr-1">
+                                  <span class="fa fa-save"></span> Salvar
+                                  </a><a href="https://novobat.prf.gov.br/novobat/protegido/boletim/inicio" class="btn btn-secondary">
+                                  <span class="fa fa-remove"></span> Voltar
+                              </a>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+        </div>
+          </div>
+          <div id="AcoesSugeridas" class="tab-pane fade">
+            <div class="card">
+              <div class="card-header">
+                      <h4><span class="fas fa-file-signature"></span> 
+                          Sugestões
+                      </h4>
+              </div>
+              <div class="card-block p-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                <div class="col-md-12">
+                  
+                  <div class="form-group">
+                  
+<div class="input-group data-hora" id="j_idt44:dataVestigios" tabindex="-1">
+        <div  id="Sugestao" class="col-md-12" >
+          <div class="col-6 col-md-3"><input input id="Esforco_Legal" type="radio" name="Sugestoes" value="Esforco_Legal"><label> Esforço Legal</label></div>
+          <div class="col-6 col-md-3"><input input id="Acoes_Preventivas" type="radio" name="Sugestoes" value="Acoes_Preventivas"><label> Ações Preventivas</label></div>
+          <div class="col-6 col-md-3"><input input id="Intervencao_Viaria/Ambiental" type="radio" name="Sugestoes" value="Intervencao_Viaria/Ambiental"><label> Intervenção Viária/Ambiental</label></div>
+          <div class="col-6 col-md-3"><input input id="Intervencao_Veicular" type="radio" name="Sugestoes" value="Intervencao_Veicular"><label> Intervenção Veícular</label></div>  
+          </div>
+                 
+       
+      <div class="form-group"><textarea id="Sugestões_texto" name="Sugestões_texto" >
+      </textarea>       
+        <div class="invalid-feedback">
+        </div>                
+      <div class="input-group data-hora" id="j_idt44:dataVestigios" tabindex="-1">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+              <span class="fa fa-file-alt"></span>
+          </span></div>
+            <span id="multiple_upload" class="ui-calendar form-control border-0 p-0"><input type="file" id="Sugestoes" multiple name="files[]" class="form-control border-inherit"></span>
+      </div>
+      <output id="Sugestoes_imagem"></output>
+              </div> <div class="col-md-12" id="wrapper">
+        
+                <div id="form_div">
+        
+                  
+                  <table id="Incluir_Outra_Acao_Sugerida_table" >
+                    <tr id="row0">
+                    </tr>
+                   </table>
+        
+                  
+                  
+                <input type="button" onclick="Incluir_Outra_Acao_Sugerida();" value="Incluir Outra Ação Sugerida">
+                  
+                
+                
+              </div>
+            </div>                         
+           </div>        
+          </div>  
+        </div>
+      
+                        
+      
+                        <div class="col-md-12">
+                            <div class="form-group mb-0"><a id="j_idt44:j_idt183" href="#" onclick="mojarra.ab(this,event,'action','@form','@form j_idt44:mensagemGlobal');return false" class="btn btn-primary mr-1">
+                                        <span class="fa fa-save"></span> Salvar
+                                        </a><a href="https://novobat.prf.gov.br/novobat/protegido/boletim/inicio" class="btn btn-secondary">
+                                        <span class="fa fa-remove"></span> Voltar
+                                    </a>
+                                    <a class="btn btn-primary " href="javascript:genPDF()"><span  class="fas fa-file-pdf"></span> Download PDF</a>
+                            </div>
+      
+                        </div>
+                    </div>
+                </div>
+            </div>
+              </div>
+
+          </div>
+            <div id="Conclusao" class="tab-pane fade">
+              <div class="card">
+                <div class="card-header">
+                        <h4><span class="fas fa-check-double"></span> 
+                            Finalização
+                        </h4>
+                </div>
+                <div class="card-block p-4">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-8"> 
+                        <div class="col-md-12"> 
+                       
+                          <div class="form-group"><label for="j_idt44:Causas_Determinante" class="form-control-label">Causas</label><span id="j_idt44:dataCausas_Determinante" class="ui-calendar form-control border-0 p-0"><select id="Causa_Determinante" size="1" name="Causa_Determinante" class="form-control border-inherit">
+                            <option value= "Animais na Pista" >Animais na Pista</option>
+                                <option value= "Defeito Mecânico no Veículo" >Defeito Mecânico no Veículo</option>
+                                <option value= "Velocidade Incompatível" >Velocidade Incompatível</option>
+                                <option value= "Falta de Atenção à Condução" >Falta de Atenção à Condução</option>
+                                <option value= "Defeito na Via" >Defeito na Via</option>
+                                <option value= "Desobediência às normas de trânsito pelo condutor" >Desobediência às normas de trânsito pelo condutor</option>
+                                <option value= "Ingestão de Álcool" >Ingestão de Álcool</option>
+                                <option value= "Não guardar distância de segurança" >Não guardar distância de segurança</option>
+                                <option value= "Condutor Dormindo" >Condutor Dormindo</option>
+                                <option value= "Carga excessiva e/ou mal acondicionada" >Carga excessiva e/ou mal acondicionada</option>
+                                <option value= "Avarias e/ou desgaste excessivo no pneu" >Avarias e/ou desgaste excessivo no pneu</option>
+                                <option value= "Objeto estático sobre o leito carroçável" >Objeto estático sobre o leito carroçável</option>
+                                <option value= "Ultrapassagem Indevida" >Ultrapassagem Indevida</option>
+                                <option value= "Mal Súbito" >Mal Súbito</option>
+                                <option value= "Sinalização da via insuficiente ou inadequada" >Sinalização da via insuficiente ou inadequada</option>
+                                <option value= "Falta de Atenção do Pedestre" >Falta de Atenção do Pedestre</option>
+                                <option value= "Deficiência ou não Acionamento do Sistema de Iluminação/Sinalização do Veículo" >Deficiência ou não Acionamento do Sistema de Iluminação/Sinalização do Veículo</option>
+                                <option value= "Restrição de Visibilidade" >Restrição de Visibilidade</option>
+                                <option value= "Pista Escorregadia" >Pista Escorregadia</option>
+                                <option value= "Fenômenos da Natureza" >Fenômenos da Natureza</option>
+                                <option value= "Ingestão de álcool e/ou substâncias psicoativas pelo pedestre" >Ingestão de álcool e/ou substâncias psicoativas pelo pedestre</option>
+                                <option value= "Desobediência às normas de trânsito pelo pedestre" >Desobediência às normas de trânsito pelo pedestre</option>
+                                <option value= "Agressão Externa" >Agressão Externa</option>
+                                <option value= "Ingestão de Substâncias Psicoativas" >Ingestão de Substâncias Psicoativas</option>
+                                <option value= "Outra" >Outra</option>
+                          </select></span> 
+                            
+
+                              <div class="form-group" id="Outra_Causa" name="Outra_Causa" style="display:none;">
+                                <div class="form-group">
+                                  <label for="j_idt44:Causas" class="form-control-label">Descreva a Outra Causa</label><input type="text" id="Outras" name="Outras" class="form-control"/>       
+                                  <div class="invalid-feedback">
+                                  </div>           
+                           </div>     
+                          </div>
+                        </div>
+                        <div class="col-md-12" id="wrapper">
+                          <div class="form-group">
+
+                          <div id="form_div">
+                            <table id="Incluir_Causa_table" >
+                             <tr id="rowCausa">
+                             </tr>
+                            </table>
+                            
+                            <input type="button" onclick="Incluir_Causa();"  value="Incluir Causa">
+                          
+                          </div>
+                        </div>
+                        </div> 
+                      </div>
+                          <div class="col-md-12" >
+                            <div class="form-group">
+                              <label for="j_idt44:Fator_Agravante" class="form-control-label">Fator Agravante</label><span id="j_idt44:dataFator_Agravante" class="ui-calendar form-control border-0 p-0"><select id="Fator_Agravante" size="1" name="Fator_Agravante" class="form-control border-inherit">
+                                <option value= "Não Há" >Não Há</option>
+                                <option value= "Animais na Pista" >Animais na Pista</option>
+                                <option value= "Defeito Mecânico no Veículo" >Defeito Mecânico no Veículo</option>
+                                <option value= "Velocidade Incompatível" >Velocidade Incompatível</option>
+                                <option value= "Falta de Atenção à Condução" >Falta de Atenção à Condução</option>
+                                <option value= "Defeito na Via" >Defeito na Via</option>
+                                <option value= "Desobediência às normas de trânsito pelo condutor" >Desobediência às normas de trânsito pelo condutor</option>
+                                <option value= "Ingestão de Álcool" >Ingestão de Álcool</option>
+                                <option value= "Não guardar distância de segurança" >Não guardar distância de segurança</option>
+                                <option value= "Condutor Dormindo" >Condutor Dormindo</option>
+                                <option value= "Carga excessiva e/ou mal acondicionada" >Carga excessiva e/ou mal acondicionada</option>
+                                <option value= "Avarias e/ou desgaste excessivo no pneu" >Avarias e/ou desgaste excessivo no pneu</option>
+                                <option value= "Objeto estático sobre o leito carroçável" >Objeto estático sobre o leito carroçável</option>
+                                <option value= "Ultrapassagem Indevida" >Ultrapassagem Indevida</option>
+                                <option value= "Mal Súbito" >Mal Súbito</option>
+                                <option value= "Sinalização da via insuficiente ou inadequada" >Sinalização da via insuficiente ou inadequada</option>
+                                <option value= "Falta de Atenção do Pedestre" >Falta de Atenção do Pedestre</option>
+                                <option value= "Deficiência ou não Acionamento do Sistema de Iluminação/Sinalização do Veículo" >Deficiência ou não Acionamento do Sistema de Iluminação/Sinalização do Veículo</option>
+                                <option value= "Restrição de Visibilidade" >Restrição de Visibilidade</option>
+                                <option value= "Pista Escorregadia" >Pista Escorregadia</option>
+                                <option value= "Fenômenos da Natureza" >Fenômenos da Natureza</option>
+                                <option value= "Ingestão de álcool e/ou substâncias psicoativas pelo pedestre" >Ingestão de álcool e/ou substâncias psicoativas pelo pedestre</option>
+                                <option value= "Desobediência às normas de trânsito pelo pedestre" >Desobediência às normas de trânsito pelo pedestre</option>
+                                <option value= "Agressão Externa" >Agressão Externa</option>
+                                <option value= "Ingestão de Substâncias Psicoativas" >Ingestão de Substâncias Psicoativas</option>
+                                <option value= "Outro" >Outro</option>
+                              </select></span>
+                              <div class="form-group" id="Outro_Fator_Agravante" name="Outro_Fator_Agravante" style="display:none;">
+                                <div class="form-group">
+                                  <label for="j_idt44:Fator_Agravante" class="form-control-label">Descreva o Outro Fator Agravante</label><input type="text" id="Outro_Fator_Agravante_texto" name="Outro_Fator_Agravante_texto" class="form-control"/>       
+                                  <div class="invalid-feedback">
+                                  </div>           
+                           </div>     
+                          </div>
+                                           
+                  <div class="invalid-feedback">
+                  </div>
+                          </div>
+                          <div class="col-md-12" id="wrapper">
+                            <div class="form-group">
+  
+                            <div id="form_div">
+                              <table id="Incluir_Fator_Agravante_table" >
+                               <tr id="rowAgravante">
+                               </tr>
+                              </table>
+                              
+                              <input type="button" onclick="Incluir_Fator_Agravante();"  value="Incluir Fator Agravante">
+                            
+                            </div>
+                          </div>
+                          </div>
+                          </div> 
+                          <div class="col-md-12" >
+                            <div class="form-group">
+                              <label for="j_idt44:Fator_Contribuinte" class="form-control-label">Fator Contribuinte</label><span id="j_idt44:dataFator_Contribuinte" class="ui-calendar form-control border-0 p-0"><select id="Fator_Contribuinte" size="1" name="Fator_Contribuinte" class="form-control border-inherit">
+                                <option value= "Não Há" >Não Há</option>
+                                <option value= "Animais na Pista" >Animais na Pista</option>
+                                <option value= "Defeito Mecânico no Veículo" >Defeito Mecânico no Veículo</option>
+                                <option value= "Velocidade Incompatível" >Velocidade Incompatível</option>
+                                <option value= "Falta de Atenção à Condução" >Falta de Atenção à Condução</option>
+                                <option value= "Defeito na Via" >Defeito na Via</option>
+                                <option value= "Desobediência às normas de trânsito pelo condutor" >Desobediência às normas de trânsito pelo condutor</option>
+                                <option value= "Ingestão de Álcool" >Ingestão de Álcool</option>
+                                <option value= "Não guardar distância de segurança" >Não guardar distância de segurança</option>
+                                <option value= "Condutor Dormindo" >Condutor Dormindo</option>
+                                <option value= "Carga excessiva e/ou mal acondicionada" >Carga excessiva e/ou mal acondicionada</option>
+                                <option value= "Avarias e/ou desgaste excessivo no pneu" >Avarias e/ou desgaste excessivo no pneu</option>
+                                <option value= "Objeto estático sobre o leito carroçável" >Objeto estático sobre o leito carroçável</option>
+                                <option value= "Ultrapassagem Indevida" >Ultrapassagem Indevida</option>
+                                <option value= "Mal Súbito" >Mal Súbito</option>
+                                <option value= "Sinalização da via insuficiente ou inadequada" >Sinalização da via insuficiente ou inadequada</option>
+                                <option value= "Falta de Atenção do Pedestre" >Falta de Atenção do Pedestre</option>
+                                <option value= "Deficiência ou não Acionamento do Sistema de Iluminação/Sinalização do Veículo" >Deficiência ou não Acionamento do Sistema de Iluminação/Sinalização do Veículo</option>
+                                <option value= "Restrição de Visibilidade" >Restrição de Visibilidade</option>
+                                <option value= "Pista Escorregadia" >Pista Escorregadia</option>
+                                <option value= "Fenômenos da Natureza" >Fenômenos da Natureza</option>
+                                <option value= "Ingestão de álcool e/ou substâncias psicoativas pelo pedestre" >Ingestão de álcool e/ou substâncias psicoativas pelo pedestre</option>
+                                <option value= "Desobediência às normas de trânsito pelo pedestre" >Desobediência às normas de trânsito pelo pedestre</option>
+                                <option value= "Agressão Externa" >Agressão Externa</option>
+                                <option value= "Ingestão de Substâncias Psicoativas" >Ingestão de Substâncias Psicoativas</option>
+                                <option value= "Outro" >Outro</option>
+                              </select></span>
+                              <div class="form-group" id="Outro_Fator_Contribuinte" name="Outro_Fator_Contribuinte" style="display:none;">
+                                <div class="form-group">
+                                  <label for="j_idt44:Fator_Contribuinte" class="form-control-label">Descreva o Outro Fator Contribuinte</label><input type="text" id="Outro_Fator_Contribuinte_texto" name="Outro_Fator_Contribuinte_texto" class="form-control"/>       
+                                  <div class="invalid-feedback">
+                                  </div>           
+                           </div>     
+                          </div>
+                              
+                                           
+                  <div class="invalid-feedback">
+                  </div>
+                          </div>
+
+                          <div class="col-md-12" id="wrapper">
+                            <div class="form-group">
+  
+                            <div id="form_div">
+                              <table id="Incluir_Fator_Contribuinte_table" >
+                               <tr id="rowContribuinte">
+                               </tr>
+                              </table>
+                              
+                              <input type="button" onclick="Incluir_Fator_Contribuinte();"  value="Incluir Fator Contribuinte">
+                            
+                            </div>
+                          </div>
+                          </div>
+                          </div> 
+                          <div class="col-md-12" >
+                            <div class="form-group">
+                              <label for="j_idt44:Referencias" class="form-control-label">REFERÊNCIAS BIBLIOGRÁFICAS</label><span id="j_idt44:dataReferencias" class="ui-calendar form-control border-0 p-0"><select id="Referencias" size="1" name="Referencias" class="form-control border-inherit">
+                                <option value= "1" >ALMEIDA, L. L. Manual de perícias em acidentes de trânsito. Campinas, SP: Millenium, 2011.</option>
+                                <option value= "2" >ARAGÃO. R. F. Acidente de trânsito: análise da prova pericial. 5. Ed. Campinas: Millenium, 2011.</option>
+                                <option value= "ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 6021: informação e documentação: publicação periódica técnica e/ou científica." >ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 6021: informação e documentação: publicação periódica técnica e/ou científica</option>
+                                <option value= "ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 8196: desenho técnico: emprego de escala. Rio de Janeiro, 1999." >ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 8196: desenho técnico: emprego de escala. Rio de Janeiro, 1999.</option>
+                                <option value= "ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 10068: folha de desenho: leiaute e dimensões. Rio de Janeiro, 1987." >ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 10068: folha de desenho: leiaute e dimensões. Rio de Janeiro, 1987.</option>
+                                <option value= "BRASIL. Departamento Nacional de Estradas de Rodagem. Manual de projeto geométrico de rodovias rurais. Rio de Janeiro, 1999." >BRASIL. Departamento Nacional de Estradas de Rodagem. Manual de projeto geométrico de rodovias rurais. Rio de Janeiro, 1999.</option>
+                                <option value= "ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. Departamento Nacional de Infraestrutura de Transportes. Manual de projeto e práticas operacionais para segurança nas rodovias. Rio de Janeiro, 2010." >ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. Departamento Nacional de Infraestrutura de Transportes. Manual de projeto e práticas operacionais para segurança nas rodovias. Rio de Janeiro, 2010.</option>
+                                <option value= "ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS.CONSELHO NACIONAL DE TRÂNSITO (Brasil). Sinalização horizontal / Contran-Denatran. 1. ed. Brasília, 2007a." >ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS.CONSELHO NACIONAL DE TRÂNSITO (Brasil). Sinalização horizontal / Contran-Denatran. 1. ed. Brasília, 2007a.</option>
+                                <option value= "Sinalização vertical de regulamentação / Contran-Denatran. 2. ed. – Brasília, 2007b." >Sinalização vertical de regulamentação / Contran-Denatran. 2. ed. – Brasília, 2007b.</option>
+                                <option value= "Outra" >Outra</option>
+                              </select></span>
+                              <div class="form-group" id="Outra_Referencias" name="Outra_Referencias" style="display:none;">
+                                <div class="form-group">
+                                  <label for="j_idt44:Referencias" class="form-control-label">Cite a Outra Referência</label><input type="text" id="Outra_Referencias_texto" name="Outra_Referencias_texto" class="form-control"/>       
+                                  <div class="invalid-feedback">
+                                  </div>           
+                           </div>     
+                          </div>
+                              
+                                           
+                  <div class="invalid-feedback">
+                  </div>
+                          </div>
+
+                          <div class="col-md-12" id="wrapper">
+                            <div class="form-group">
+  
+                            <div id="form_div">
+                              <table id="Incluir_Referencia_table" >
+                               <tr id="rowReferencia">
+                               </tr>
+                              </table>
+                              
+                              <input type="button" onclick="Incluir_Referencia();"  value="Incluir Referência">
+                            
+                            </div>
+                          </div>
+                          </div>
+                          </div> 
+                          <div class="col-md-12">
+                              <div class="form-group mb-0"><a id="j_idt44:j_idt183" href="#" onclick="mojarra.ab(this,event,'action','@form','@form j_idt44:mensagemGlobal');return false" class="btn btn-primary mr-1">
+                                          <span class="fa fa-save"></span> Salvar
+                                          </a><a href="https://novobat.prf.gov.br/novobat/protegido/boletim/inicio" class="btn btn-secondary">
+                                          <span class="fa fa-remove"></span> Voltar
+                                          
+                                      </a>
+                              </div>
+        
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                </div>
+              
+            </div>
+        </div>
+        
+      </section> 
+    
+</div>
+<script async src="https://drv.tw/inc/wd.js"></script></body>
+
+
+
+
+<footer class="app-footer">
+    <span><strong style="font-size: 14px;font-weight: bold;">Sistema Integrado de Perícia</strong></span>
+    <span title="Descrição:  Retira automatismo para busca no Infoconv 
+            Hash: a1fbbe4 
+            Autor:  Thyago " class="ml-auto">
+            <small class="text-muted" style="font-size: 11px;">
+                Versão: - Data: 01/01/2020 00:00
+            </small>
+    </span>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<!-- CoreUI main scripts -->
+
+<script src="pagina.js"></script>
+<script src="PRF_Responsavel.js"></script>
+<script src="Incluir_Outra_Acao_Sugerida.js"></script>
+<script src="Incluir_Veiculo.js"></script>
+<script src="Vestigio.js"></script>
+<script src="Incluir_Pessoa.js"></script>
+<script src="Apoio_Externo.js"></script>
+<script src="Tipo_acidente.js"></script>
+<script src="Intermediaria.js"></script>
+<script src="imagens.js"></script>
+<script src="Croqui_Antecedente.js"></script>
+<script src="Croqui_Culminante.js"></script>
+<script src="Croqui_Intermediárias.js"></script>
+<script src="Croqui_Final.js"></script>
+<script src="Reconstrução_Digital.js"></script>
+<script src="Sugestoes.js"></script>
+<script src="Incluir_Causa.js"></script>
+<script src="Incluir_Fator_Agravante.js"></script>
+<script src="Incluir_Fator_Contribuinte.js"></script>
+<script src="Incluir_Referencia.js"></script>
+<script src="Textarea.js"></script>
+<script src="compress.js"></script>
+
+                <script>
+                    $(function () {
+                        $("#escolhaContrato").click(function () {
+                            if ($(this).is(":checked")) {
+                                $("#boxContrato").show();   
+                            } else {
+                                $("#boxContrato").hide();
+                            }
+                        });
+                    });   
+                </script>
+
+<script>
+$(document).ready(function () {
+  $('#Causa_Determinante').change(function () {
+                            var Causas=document.getElementById("Causa_Determinante");
+                            var Causas =  Causas.value;
+                            if (Causas=="Outra") {
+                                $("#Outra_Causa").show();   
+                            } else {
+                                $("#Outra_Causa").hide();
+                            }});
+});
+
+$(document).ready(function () {
+  $('#Fator_Agravante').change(function () {
+                            var Fator_Agravante=document.getElementById("Fator_Agravante");
+                            var Fator_Agravante =  Fator_Agravante.value;
+                            if (Fator_Agravante=="Outro") {
+                                $("#Outro_Fator_Agravante").show();   
+                            } else {
+                                $("#Outro_Fator_Agravante").hide();
+                            }});
+});
+
+$(document).ready(function () {
+  $('#Fator_Contribuinte').change(function () {
+                            var Fator_Contribuinte=document.getElementById("Fator_Contribuinte");
+                            var Fator_Contribuinte =  Fator_Contribuinte.value;
+                            if (Fator_Contribuinte=="Outro") {
+                                $("#Outro_Fator_Contribuinte").show();   
+                            } else {
+                                $("#Outro_Fator_Contribuinte").hide();
+                            }});
+});
+
+$(document).ready(function () {
+  $('#Referencias').change(function () {
+                            var Referencias=document.getElementById("Referencias");
+                            var Referencias =  Referencias.value;
+                            if (Referencias=="Outra") {
+                                $("#Outra_Referencias").show();   
+                            } else {
+                                $("#Outra_Referencias").hide();
+                            }});
+});
+
+$(document).ready(function () {
+  $('#Envolvimento').change(function () {
+                            var Envolvimento=document.getElementById("Envolvimento");
+                            var Envolvimento =  Envolvimento.value;
+                            if (Envolvimento=="condutor"||Envolvimento=="passageiro") {
+                                $("#condutor_passageiro").show();   
+                            } else {
+                                $("#condutor_passageiro").hide();
+                            }});
+});
+
+
+$(function() {
+  $('#Material_texto').autoResize();
+});
+$(function() {
+  $('#Vestígios_texto').autoResize();
+});
+
+$(function() {
+  $('#Antecedente').autoResize();
+});
+$(function() {
+  $('#Culminante').autoResize();
+});
+$(function() {
+  $('#Intermediario').autoResize();
+});
+$(function() {
+  $('#Final').autoResize();
+});
+$(function() {
+  $('#Digital').autoResize();
+});
+$(function() {
+  $('#CALCPRF').autoResize();
+});
+$(function() {
+  $('#Sugestões_texto').autoResize();
+});
+</script>
+
+
+
+                <script>
+                    $(function () {
+                        $("#escolhaContrato1").click(function () {
+                            if ($(this).is(":checked")) {
+                                $("#boxContrato1").show();
+                            } else {
+                                $("#boxContrato1").hide();
+                            }
+                        });
+                    });   
+                </script>
+
+<script src="drop.js"></script>
+
+
+</body>
+</html>

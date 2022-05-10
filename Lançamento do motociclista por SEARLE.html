@@ -1,0 +1,440 @@
+﻿
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="PRF - Sistema Integrado de Perícia">
+    <meta name="author" content="PRF/SIP">
+    <meta name="csrf-token" content="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+    <meta id="_token" value="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+
+    <link rel="shortcut icon" href="https://sicop.prf.gov.br/sicop/favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="1.5.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+    <!-- Icons -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Main styles for this application -->
+    <link href="https://sicop.prf.gov.br/sicop/build/css/all.css?id=524d9076de909eaa44c0" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+    
+
+</head>
+
+<body class="app header-fixed sidebar-fixed sidebar-lg-show">
+<header class="app-header navbar">
+            <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="https://sicop.prf.gov.br/sicop/prf.png" width="89" height="25" alt="PRF">
+    </a>
+            <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-xl-show">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+    <a  href="./login.html" class="nome-sistema d-md-down-none" >
+        SIP
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown d-md-down-none">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+               aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bars"></i>
+                <span class="hidden-xs-down" >Sistemas</span>
+                
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a target="_blank" href="https://www170.prf.gov.br/alertabrasil" class="dropdown-item "><i
+                    class="far fa-square"></i> Alerta Brasil</a>
+                                                                <a target="_blank" href="https://www170.prf.gov.br/alertacentral" class="dropdown-item "><i
+                    class="far fa-square"></i> Alerta Brasil 2</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/novobat" class="dropdown-item "><i
+                    class="far fa-square"></i> BAT</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/bop" class="dropdown-item "><i
+                    class="far fa-square"></i> BOP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/pdi" class="dropdown-item "><i
+                    class="far fa-square"></i> PDI</a>
+                                                                <a target="_blank" href="https://sei.prf.gov.br/" class="dropdown-item "><i
+                    class="far fa-square"></i> SEI</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/sicop" class="dropdown-item "><i
+                    class="far fa-square"></i> SICOP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/silver" class="dropdown-item "><i
+                    class="far fa-square"></i> SILVER</a>
+                                                                <a href="#" class="dropdown-item active"><i
+                    class="far fa-check-square"></i> SIP</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/multa2" class="dropdown-item "><i
+                    class="far fa-square"></i> SISCOM</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/sisnar" class="dropdown-item "><i
+                    class="far fa-square"></i> SISNAR</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/webmail" class="dropdown-item "><i
+                    class="far fa-square"></i> WebMail</a>
+                                                                <a target="_blank" href="https://www.prf.gov.br/wikiprf" class="dropdown-item "><i
+                    class="far fa-square"></i> WikiPRF</a>
+                                                </div>
+        </li>
+        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user"></i>
+                    <span class="d-md-down-none"></span>
+                    
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    
+                    
+                    
+                    <form action="https://sicop.prf.gov.br/sicop/logout" method="post">
+                        <input type="hidden" name="_token" value="Hpk1VAtyJ0JpZAvnSVDPWuH3QfVOWfqNU8txLxip">
+                        <button type="submit" class="dropdown-item">
+                            <i class="fa fa-power-off"></i> <b>Sair</b>
+                        </button>
+                    </form>
+                </div>
+                    </li>
+    </ul>
+
+</header>
+
+<div class="app-body" id="site">
+ 
+
+    <div class="sidebar" >
+
+      <button class="w3-button w3-block w3-left-align w3-hover-blue"  onclick="location.href='./inicio.html'">
+        <i class="fa fa-home"> CALCPRF - Início</i>
+      </button>
+      
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc()">
+        COEFICENTE DE ATRITO  <i class="fa fa-caret-down"></i>
+      </button>
+        <div id="demoAcc" class="w3-hide w3-white w3-card">
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./CAFA x DESACELERAÇÃO.html'">CONTRA A DESACELERAÇÃO</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./COEFICIENTE DE ATRITO EM RAMPA.html'">EM RAMPA</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./COEFICIENTE DE ATRITO MÉDIO.html'">MÉDIO</button>
+        </div>
+
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc1()">
+        COLISÃO  <i class="fa fa-caret-down"></i>
+      </button>
+        <div id="demoAcc1" class="w3-hide w3-white w3-card">
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade pelo deslocamento de objeto móvel.html'">COM OBJETO MÓVEL</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade pelo deslocamento de Poste de concreto.html'">COM POSTE DE CONCRETO</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE DE IMPACTO DA MOTOCICLETA EM COLISÃO COM AUTOMÓVEIS.html'">MOTOCICLETA X AUTOMÓVEL</button>
+        </div>
+            
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc2()">
+        DISTÂNCIA  <i class="fa fa-caret-down"></i>
+      </button>
+        <div id="demoAcc2" class="w3-hide w3-white w3-card">
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Atropelamento SEARLE pela projeção do pedestre distancia.html'">DE ATROPELAMENTO PELA VELOCIDADE</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Frenagem.html'">DE FRENAGEM / ARRASTAMENTO PELA VELOCIDADE</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de percepção  reação  acionamento.html'">DE PERCEPÇÃO / ACIONAMENTO / REAÇÃO</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Frenagem e percepção.html'">DE PERCEPÇÃO / REAÇÃO E FRENAGEM / ARRASTAMENTO PELA VELOCIDADE E TEMPO DE REAÇÃO</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Visibilidade.html'">DE VISIBILIDADE REAL POR SITUAÇÃO SIMULADA (NOTURNA)</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Manobra evasiva Total.html'">NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Manobra evasiva.html'">NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</button>
+        </div>
+    
+      <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc3()">
+        PRINCÍPIO DA CONSERVAÇÃO DA ENERGIA  <i class="fa fa-caret-down"></i>
+      </button>
+        <div id="demoAcc3" class="w3-hide w3-white w3-card">
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./No Aclive.html'">NO ACLIVE</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./No Declive.html'">NO DECLIVE</button>
+          <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./No Plano.html'">NO PLANO</button>
+        </div>
+
+        <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc4()">
+          TABELA  <i class="fa fa-caret-down"></i>
+        </button>
+          <div id="demoAcc4" class="w3-hide w3-white w3-card">
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito em situações diversas.html'">ATRITO EM SITUAÇÕES DIVERSAS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito rodoviário.html'">ATRITO RODOVIÁRIO</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito por tipo de veículo.html'">ATRITO POR TIPO DE VEÍCULO</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito rodoviário geral.html'">ATRITO RODOVIÁRIO GERAL</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito por condições dos pneumáticos.html'">ATRITO POR CONDIÇÕES DOS PNEUMÁTICOS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito em função da velocidade.html'">ATRITO EM FUNÇÃO DA VELOCIDADE</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito por tipo de veículos.html'">ATRITO POR TIPO DE VEÍCULOS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito em situações diversas 2.html'">ATRITO EM SITUAÇÕES DIVERSAS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito em função da velocidade e das condições dos pneumáticos.html'">ATRITO EM FUNÇÃO DA VELOCIDADE E DAS CONDIÇÕES DOS PNEUMÁTICOS</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficiente de atrito em relação ao tipo de veículo e peso.html'">ATRITO EM RELAÇÃO AO TIPO DE VEÍCULO
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lista de coeficientes de atrito para motocicletas em função do peso.html'">ATRITO PARA MOTOCICLETAS EM FUNÇÃO DO PESO</button>
+            <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./TABELA GENÉRICA DE DADOS TÉCNICOS DE VEÍCULOS.html'">GENÉRICA DE DADOS TÉCNICOS DE VEÍCULOS</button>
+          </div>
+
+        <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc5()">
+          VELOCIDADE  <i class="fa fa-caret-down"></i>
+        </button>
+          <div id="demoAcc5" class="w3-hide w3-white w3-card">
+            <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc6()">
+              CRÍTICA  <i class="fa fa-caret-down"></i>
+            </button>
+              <div id="demoAcc6" class="w3-hide w3-white w3-card w3-hover-grey">
+                <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE CRÍTICA NA CURVA.html'">NA CURVA</button>
+                <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (1 RAIOS).html'">POR MARCAS DE DERRAPAGEM (1 RAIOS)</button>
+                <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE CRÍTICA POT MARCAS DE DERRAPAGEM (2 RAIOS).html'">POR MARCAS DE DERRAPAGEM CIRCULAR (2 RAIOS)</button>
+              </div>
+
+              <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc7()">
+                DE AQUAPLANAGEM  <i class="fa fa-caret-down"></i>
+              </button>
+                <div id="demoAcc7" class="w3-hide w3-white w3-card">
+                  <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Aquaplanagem veículos Modelo 01.html'">1 (PRESSÃO DOS PNEUS)</button>
+                  <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Aquaplanagem veículos Modelo Hidroplaneo(NAVIN).html'">2 (PRESSÃO DOS PNEUS E SUPERFÍCIE DE CONTATO COM O SOLO)</button>
+                  <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Aquaplanagem veículos pesados(Caminhões).html'">PARA VEÍCULOS PESADOS</button>
+                </div>
+
+                <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc8()">
+                  DE ATROPELAMENTO  <i class="fa fa-caret-down"></i>
+                </button>
+                  <div id="demoAcc8" class="w3-hide w3-white w3-card">
+                    <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade pelo rompimento do Parabrisa.html'">POR DANO NO PARA-BRISA</button>
+                    <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Atropelamento SEARLE pela projeção do pedestre.html'">POR LANÇAMENTO TOTAL (SEARLE)</button>
+                  </div>
+
+                  <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc9()">
+                    DE COLISÃO  <i class="fa fa-caret-down"></i>
+                  </button>
+                    <div id="demoAcc9" class="w3-hide w3-white w3-card">
+                      <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./COLISÃO COLINEAR.html'">COLINEAR</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./COLISÃO EXCÊNTRICA.html'">EXCÊNTRICA</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./PRINCÍPIO DA CONSERVAÇÃO DA QUANTIDADE DE MOVIMENTO.html'">POR QUANTIDADE DE MOVIMENTO</button>
+                    </div>
+
+                    <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc10()">
+                      DE TOMBAMENTO  <i class="fa fa-caret-down"></i>
+                    </button>
+                      <div id="demoAcc10" class="w3-hide w3-white w3-card">
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./TOMBAMENTO.html'">GERAL</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./VELOCIDADE DE CAPOTAMENTO DE VEÍCULOS DE GRANDE PORTE.html'">PARA VEÍCULOS DE CARGA</button>
+                      </div>
+                      
+                    <button class="w3-button w3-block w3-left-align w3-hover-light-blue" onclick="myAccFunc11()">
+                      DEMIAS FÓRMULAS PARA VELOCIDADE  <i class="fa fa-caret-down"></i>
+                    </button>
+                      <div id="demoAcc11" class="w3-hide w3-white w3-card">
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./CAPOTAMENTO.html'">VELOCIDADE DE CAPOTAMENTO</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Modelo de rotação e translação do veículo.html'">VELOCIDADE DE ROTAÇÃO DE VEÍCULO</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Saida de Pista em rampa.html'">VELOCIDADE DE SAÍDA DE PISTA EM RAMPA (LANÇAMENTO)</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade média.html'">VELOCIDADE MÉDIA</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade pela energia cinética.html'">VELOCIDADE PELA ENERGIA CINÉTICA<button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade por distância de parada e reação.html'">VELOCIDADE POR DISTÂNCIA DE PARADA E PERCEPÇÃO / REAÇÃO</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Velocidade de circulacão da moto pelo encurtamento entre eixos(SEVERY).html'">VELOCIDADE POR ENCURTAMENTO DE DISTÂNCIA ENTRE - EIXOS DE MOTOCICLETAS</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Lançamento do motociclista por SEARLE.html'">VELOCIDADE POR QUANTIDADE DE MOVIMENTO</button>
+                        <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Soma das Velocidades quadráticas.html'">SOMA DE VELOCIDADES QUADRÁTICAS</button>
+                      </div>
+          </div>
+
+          <button class="w3-button w3-block w3-left-align w3-hover-blue" onclick="myAccFunc12()">
+            OUTROS CÁLCULOS  <i class="fa fa-caret-down"></i>
+          </button>
+            <div id="demoAcc12" class="w3-hide w3-white w3-card">
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Atropelamento SEARLE pela projeção do pedestre distancia.html'">DE ATROPELAMENTO PELA VELOCIDADE</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Frenagem.html'">DE FRENAGEM / ARRASTAMENTO PELA VELOCIDADE</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de percepção  reação  acionamento.html'">DE PERCEPÇÃO / ACIONAMENTO / REAÇÃO</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Frenagem e percepção.html'">DE PERCEPÇÃO / REAÇÃO E FRENAGEM / ARRASTAMENTO PELA VELOCIDADE E TEMPO DE REAÇÃO</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Distância de Visibilidade.html'">DE VISIBILIDADE REAL POR SITUAÇÃO SIMULADA (NOTURNA)</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Manobra evasiva Total.html'">NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL E RETORNO)</button>
+              <button class="w3-button w3-block w3-left-align w3-dark-grey"  onclick="location.href='./Manobra evasiva.html'">NECESSÁRIA PARA MANOBRA EVASIVA COMPLETA (SAÍDA LATERAL)</button>
+            </div>
+          
+                        
+
+                        
+    </div>
+
+    <!-- Main content -->
+    <main class="main">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <div class="noScreen"><img class="b" src="PRF.png" style="width:100%;height:auto"></div>
+<center><h2 class="a" style="font-weight: bold;font-family: Times New Roman, Times, serif;" >VELOCIDADE POR LANÇAMENTO DE MOTOCICLISTA - SEARLE</h1>
+<img src="atropelamento.png" width="20%" height="auto" ></center><br>
+<!DOCTYPE html>
+<head>
+    <title>Lançamento do motociclista por SEARLE</title>
+    <meta charset="utf-8" />
+    <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "33%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+function Projecao() {
+    document.priceOptionForm.Projecao();
+    document.priceOptionForm.method='post';
+}
+document.onkeydown = function () {
+    if (window.event.keyCode == '13') {
+        Projecao();
+    }
+}
+
+      function  Projecao(){
+              var obj1 = document.getElementById("DPId");
+              var obj2 = document.getElementById("CAId");
+              var obj4 = document.getElementById("VId");
+              var obj5 = document.getElementById("vId");
+              var obj3 = document.getElementById("totalId");
+
+              var DP =  obj1.value;
+              var CA = obj2.value;
+              var V =  obj4.value;
+              var v = obj5.value;
+
+              var g = 9.81;
+	      var con = 3.6;
+
+              var vmi = (Math.sqrt((2*g*CA*DP)/(1+CA*CA))*con)*v;
+              var vma = (Math.sqrt(2*g*CA*DP)*con)*v;
+              vmi = vmi.toFixed(2)
+		vmi = vmi.replace('.',',');
+              vma = vma.toFixed(2)
+		vma = vma.replace('.',',');
+
+
+              if(v==1){
+	      if(V==1){
+              obj3.value = "Velocidade = "+vma+ " km/h";
+			}
+	      if(V==2){
+              obj3.value = "Velocidade = "+vmi+ " km/h";
+			}}
+              else{
+	      if(V==1){
+              obj3.value = "Velocidade = "+vma+ " m/s";
+			}
+	      if(V==2){
+              obj3.value = "Velocidade = "+vmi+ " m/s";
+			}}
+
+	}
+            
+    </script>
+
+</head>
+<body>
+            <center style="font-family: Times New Roman, Times, serif;"><h4 style="font-weight: bold;">
+            <label for="DP">d<sub>t</sub>: Distancia da Projeção em metros =&nbsp</label>
+	    <input type="Number" id="DPId"  name="DP" min="0" max="1000" style="font-size: 20px"/>
+            <br><br>
+
+            &mu;: Coeficiente de Arrastamento para  
+	    <select id="CAId" size="1" style="font-size: 20px">
+    			<option value= 0.66 >Asfalto</option>
+    			<option value= 0.79 >Grama</option>
+            </select>
+	    <br><br>
+	                Velocidade 
+	    <select id="VId" size="1" style="font-size: 20px">
+    			<option value= 1 >Máxima</option>
+    			<option value= 2 >Mínima</option>
+	    </select>
+	                <br><div class="noPrint"><br>
+
+			Tipo de velocidade:
+	    <select id="vId" size="1" style="font-size: 20px">
+    			<option value= 1 >km/h</option>
+    			<option value= 0.27777777777 >m/s</option>
+	    </select>  
+  
+			<br><br>
+	<p class="submit">
+            <input type="submit" onclick="Projecao()" value="Calcular" size="6" style="font-size: 22px;border-radius: 50%;box-shadow: 0 2px #999;outline: 0;font-weight: bold;"/>
+
+        </p> 
+		<form action="" method="get" class="priceOptionForm" name="priceOptionForm">
+		</form>
+	</div>
+	</h4>
+	
+		
+	<div class="noScreen"><br></div>
+
+	<p><label style="font-size: 24px;font-weight: bold" for="total">Resultado:</label><br>
+
+	<div class="noScreen"><br></div>
+		<textarea readonly="readonly" id="totalId" name="total" cols="22" rows="1" style="font-size: 20px;font-weight: bold;"></textarea>
+            
+        </p>
+
+<div class="noScreen"><br></div>
+
+<p class="a"><b>REFERÊNCIA:</b> SEARLE, John A. e SEARLE, Angela. <b>The trajectories of pedestrian, motorcycles, motorcyclist,etc.,  <br>folowin a road accident</b> (SAE 831622). Warrendale, PA, USA. </p>
+
+<div class="noPrint">
+<form>
+  <a class="btn btn-primary " href="#" onClick="window.print(); return false;"><span  class="fas fa-print"></span> Gerar Impressão Direta</a>
+  <a class="btn btn-primary " href="javascript:genPDF()"><span  class="fas fa-file-pdf"></span> Download PDF</a>
+</form>
+</div>
+
+<script async src="https://drv.tw/inc/wd.js"></script></body>
+</main>
+
+</div>
+
+<footer class="app-footer">
+    <span><strong style="font-size: 14px;font-weight: bold;">Sistema Integrado de Perícia</strong></span>
+    <span title="Descrição:  Retira automatismo para busca no Infoconv 
+            Hash: a1fbbe4 
+            Autor:  Thyago " class="ml-auto">
+            <small class="text-muted" style="font-size: 11px;">
+                Versão: - Data: 01/01/2020 00:00
+            </small>
+    </span>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<!-- CoreUI main scripts -->
+
+<script src="pagina.js"></script>
+
+<script src="drop.js"></script>
+
+<script src="file - Lançamento do motociclista por SEARLE.js"></script>
+
+<script src="font.js"></script>
+
+
+<!-- Plugins and scripts required by this views -->
+
+</body>
+</html>
